@@ -5,9 +5,9 @@ import restrict from '../helpers/restrict.js'
 const router = Router()
 
 router.get('/reviews', controllers.getReviews)
-router.get('/reviews/:id', controllers.geReview)
-router.post('/reviews', restrict, controllers.creatReview)
-router.put('/reviews/:id', restrict, controllers.updatReview)
-router.delete('/reviews/:id', restrict, controllers.deletReview)
+router.get('/reviews/:id', controllers.getReview)
+router.post('/reviews', restrict, controllers.createReview)
+router.put('/reviews/:id', restrict, controllers.updateReview)
+router.delete('/reviews/:id', restrict, controllers.deleteReview)
 
 export default router

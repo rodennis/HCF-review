@@ -2,7 +2,7 @@ import Review from '../models/review.js'
 
 export const getReviews = async (req, res) => {
   try {
-    const Reviews = await Review.find()
+    const reviews = await Review.find()
     res.json(reviews)
   } catch (error) {
     console.log(error.message)

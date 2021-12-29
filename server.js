@@ -3,6 +3,7 @@ import routes from './routes/index.js'
 
 import express from 'express'
 import logger from 'morgan'
+import cors from 'cors'
 
 const PORT = process.env.PORT || 3000
 const app = express()
