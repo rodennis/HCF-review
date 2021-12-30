@@ -1,0 +1,69 @@
+nav {
+    background-color: #0081A7;
+    height: 55px;
+    display: flex;
+}
+
+.left-side {
+    flex: 1;
+}
+
+.logo {
+    margin: 0px;
+    margin-top: 10px;
+    padding-right: 100px;
+    color: white;
+}
+
+.right-side {
+    flex: 3;
+    padding-top: 12px;
+}
+
+.hospital {
+    width: 390px;
+    height: 25px;
+    border-radius: 50px;
+    border-style: none;
+    background-color: #FDFCDC;
+    margin-right: 20px;
+    padding-left: 20px;
+    box-shadow: rgba(0, 0, 0, 0.5) 1.95px 1.95px 2.6px;
+}
+
+.city {
+    height: 25px;
+    width: 140px;
+    border-radius: 50px;
+    background-color: #FDFCDC;
+    margin-right: 20px;
+    padding-left: 20px;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, 0.5) 1.95px 1.95px 2.6px;
+}
+
+.state {
+    height: 25px;
+    width: 140px;
+    border-radius: 50px;
+    background-color: #FDFCDC;
+    margin-right: 20px;
+    padding-left: 20px;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, 0.5) 1.95px 1.95px 2.6px;
+}
+
+.hospital-search {
+    height: 27px;
+    width: 80px;
+    border-radius: 50px;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, 0.5) 1.95px 1.95px 2.6px;
+    margin-right: -150px;
+    background-color: #00AFB9;
+    cursor: pointer;
+}
+
+.hospital-search:hover {
+    background-color: #F07167;
+}
