@@ -1,8 +1,7 @@
 import './App.css';
-import Navbar from './components/Navbar/Navbar'
 import {Routes, Route} from 'react-router-dom'
-import Home from './screens/Home/Home'
 import {useState, useEffect} from 'react'
+import Home from './screens/Home/Home'
 import api from './services/apiConfig'
 
 function App() {
@@ -19,9 +18,9 @@ useEffect(() => {
 }, [])
   return (
     <div className="App">
-      <Navbar/>
       <Routes>
         <Route path='/' element={<Home reviews={reviews}/>}/>
+        <Route path='/review/:id' element={<Home />}/>
       </Routes>
     </div>
   );

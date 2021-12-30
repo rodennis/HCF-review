@@ -2,11 +2,22 @@ import React from 'react'
 import './Home.css'
 import featuredOne from '../../photos/manatee.jpeg'
 import featuredTwo from '../../photos/Weis.jpeg'
+import HomeNavbar from '../../components/Navbar/HomeNavbar'
 
 function Home({reviews}) {
     return (
         <div>
+            <HomeNavbar />
             <div className="call-to-action">
+                <div className="call-to-action-hospital-search">
+                    <form className='home-form'>
+                    <h2>Find A Facility</h2>
+                <input type="texttext" className="home-hospital" placeholder='Hospital Name'/> <br />
+                <input type="texttext" className="home-city" placeholder='City'/> <br />
+                <input type="texttext" className="home-state" placeholder='State'/> <br />
+                <button className='home-hospital-search'>Search</button>
+                    </form>
+                </div>
                 <div className="call-to-action-button-div">
                     <h1 className='call-to-action-title'>Start reviewing<br />
                     today!</h1>
