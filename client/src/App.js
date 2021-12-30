@@ -9,7 +9,7 @@ import { verifyUser } from './services/users'
 function App() {
 
   const [user, setUser] = useState(null)
-  const [reviews, setReviews] = useState([])
+  const [facilities, setFacilities] = useState([])
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -23,16 +23,16 @@ useEffect(() => {
  const getReviews = async () => {
     const res = await api.get('/reviews')
     console.log(res)
-    setReviews(res.data)
+    setFacilities(res.data)
  }
  getReviews()
 }, [])
   return (
     <div className="App">
       <Routes>
-        <Route path='/' element={<Home reviews={reviews} user={user}/>}/>
+        <Route path='/' element={<Home facilities={facilities} user={user}/>}/>
         <Route path='/signIn' element={<SignIn setUser={setUser}/>}/> 
-        <Route path='/review/:id' element={<Home user={user}/>}/>
+        <Route path='/facility/:id' element={<Home user={user}/>}/>
       </Routes>
     </div>
   );

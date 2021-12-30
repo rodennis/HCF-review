@@ -7,18 +7,6 @@
     display: flex;
 }
 
-.call-to-action-add-review {
-    height: 65px;
-    width: 150px;
-    border-radius: 50px;
-    border-style: none;
-    color: white;
-    font-size: 20px;
-    background-color: #F07167;
-    cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.5) 1.95px 1.95px 2.6px;
-}
-
 .call-to-action-hospital-search {
     flex: 1;
     padding-top: 200px;
@@ -100,7 +88,7 @@ flex: 3;
 }
 
 .call-to-action-title {
-    color: white;
+    color: #FDFCDC;
     font-size: 75px;
     font-family: 'IBM Plex Sans';
 }

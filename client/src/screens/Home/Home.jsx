@@ -5,10 +5,9 @@ import featuredTwo from '../../photos/Weis.jpeg'
 import HomeNavbar from '../../components/Navbar/HomeNavbar'
 import Navbar from '../../components/Navbar/Navbar'
 
-function Home({reviews, user}) {
+function Home({facilities, user}) {
     return (
         <div>
-            {/* <h1>{user.username}</h1> */}
             {user ? <Navbar/> : <HomeNavbar />  }
             <div className="call-to-action">
                 <div className="call-to-action-hospital-search">
@@ -21,9 +20,9 @@ function Home({reviews, user}) {
                     </form>
                 </div>
                 <div className="call-to-action-button-div">
-                    <h1 className='call-to-action-title'>Start reviewing<br />
+                    <h1 className='call-to-action-title'>Start 
+                   <br /> reviewing<br />
                     today!</h1>
-                    <button className='call-to-action-add-review'>Add A Review</button>
                 </div>
             </div>
                 <h2 className='featured-title'>Featured Reviews</h2>
@@ -32,13 +31,13 @@ function Home({reviews, user}) {
                     <img src={featuredOne} alt="" />
                     <p>
                     <h2 className="featured-hospital-name">Manatee Memorial Hospital</h2>
-                        {reviews[0]?.comment }
+                        {facilities[0]?.reviews[0]?.comment }
                     </p>
                 </div>
                 <div className='featured-two'>
                     <p>
                 <h2 className="featured-hospital-name">Weis Memorial Hospital</h2>
-                        {reviews[1]?.comment }
+                        {facilities[1]?.reviews[0]?.comment }
                     </p>
                     <img src={featuredTwo} alt="" />
                 </div>
