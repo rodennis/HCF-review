@@ -36,6 +36,10 @@
 
 }
 
+.home-form h2 {
+    font-family: 'IBM plex sans';
+}
+
 .home-hospital {
     width: 300px;
     height: 25px;
@@ -98,11 +102,13 @@ flex: 3;
 .call-to-action-title {
     color: white;
     font-size: 75px;
+    font-family: 'IBM Plex Sans';
 }
 
 .featured-title {
     font-size: 45px;
     padding-top: 25px;
+    font-family: 'IBM plex sans';
 }
 
 .featured-one {

@@ -3,11 +3,13 @@ import './Home.css'
 import featuredOne from '../../photos/manatee.jpeg'
 import featuredTwo from '../../photos/Weis.jpeg'
 import HomeNavbar from '../../components/Navbar/HomeNavbar'
+import Navbar from '../../components/Navbar/Navbar'
 
-function Home({reviews}) {
+function Home({reviews, user}) {
     return (
         <div>
-            <HomeNavbar />
+            {/* <h1>{user.username}</h1> */}
+            {user ? <Navbar/> : <HomeNavbar />  }
             <div className="call-to-action">
                 <div className="call-to-action-hospital-search">
                     <form className='home-form'>

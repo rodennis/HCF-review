@@ -3,10 +3,21 @@ import {Routes, Route} from 'react-router-dom'
 import {useState, useEffect} from 'react'
 import Home from './screens/Home/Home'
 import api from './services/apiConfig'
+import SignIn from './screens/SignIn/SignIn';
+import { verifyUser } from './services/users'
 
 function App() {
 
+  const [user, setUser] = useState(null)
   const [reviews, setReviews] = useState([])
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      const user = await verifyUser()
+      user ? setUser(user) : setUser(null)
+    }
+    fetchUser()
+  }, [])
 
 useEffect(() => {
  const getReviews = async () => {
@@ -19,8 +30,9 @@ useEffect(() => {
   return (
     <div className="App">
       <Routes>
-        <Route path='/' element={<Home reviews={reviews}/>}/>
-        <Route path='/review/:id' element={<Home />}/>
+        <Route path='/' element={<Home reviews={reviews} user={user}/>}/>
+        <Route path='/signIn' element={<SignIn setUser={setUser}/>}/> 
+        <Route path='/review/:id' element={<Home user={user}/>}/>
       </Routes>
     </div>
   );

@@ -1,0 +1,60 @@
+.sign-in-title {
+    margin-top: 200px; 
+    font-size: 60px;
+    padding-top: 20px;
+    color: white;
+    font-family: 'IBM plex sans';
+}
+
+.sign-in-form {
+    background-color: #0081A7;
+    width: 350px;
+    margin: auto;
+    height: 400px;
+    border-radius: 10px;
+}
+
+.email {
+    padding-top: 20px;
+    border-radius: 3px;
+    background-color: transparent;
+    border-style: none;
+    border-bottom: #F07167 solid;
+    margin: 5px;
+    width: 200px;
+    filter: opacity(0.7);
+    margin-bottom: 20px;
+}
+
+.email::placeholder {
+    color: white;
+}
+
+.password {
+    border-radius: 3px;
+    background-color: transparent;
+    border-style: none;
+    border-bottom: #F07167 solid;
+    margin: 5px;
+    width: 200px;
+    filter: opacity(0.7);
+    margin-bottom: 20px;
+}
+
+.password::placeholder {
+    color: white;
+}
+
+.sign-in-button {
+    border-radius: 20px;
+    background-color: #F07167;
+    color: white;
+    width: 208px;
+    margin-left: 3px;
+    padding: 5px;
+    border-style: none;
+    font-family: 'fira sans condensed';
+    font-size: 15px;
+    margin-top: 20px;
+    cursor: pointer;
+}
