@@ -1,6 +1,6 @@
 import React from 'react'
 import './FacilityCard.css'
-import {Link } from 'react-router-dom'
+import {Link, useParams } from 'react-router-dom'
 
 function FacilityCard({foundFacilities, name, notFound}) {
 
@@ -9,7 +9,7 @@ function FacilityCard({foundFacilities, name, notFound}) {
             {
                 foundFacilities[0] ? 
                 foundFacilities.map(facility => (
-                    <Link className='link' to='/facility'>
+                    <Link className='link' to={`/facility/${facility._id}`}>
                     <div key={facility._id} className='facility-card'>
                         <div className='facility-image'>
                         <img src={facility.image} alt="" />
@@ -24,7 +24,7 @@ function FacilityCard({foundFacilities, name, notFound}) {
                 ))
                     : <div className='not-found-div'>
                     <h1 className='loading'>{`No results found for ${notFound}.`}</h1>
-                    <button className='add-facility-button'>Add Facility</button>
+                    <Link className='link' to='/add-facility'><button className='add-facility-button'>Add Facility</button></Link>
                     </div> 
             }
         </div>
