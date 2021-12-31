@@ -15,6 +15,8 @@ const Review = new Schema(
       name: { type: String},
       image: { type: String }, 
       address: { type: String },
+      city: { type: String },
+      state: { type: String },
       phone: { type: String },
       reviews: [ Review ]
     },

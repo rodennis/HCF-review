@@ -14,9 +14,13 @@
     box-shadow: rgba(0, 0, 0, 0.5) 1.95px 1.95px 2.6px;
 }
 
+.facilities-div {
+    margin-top: 125px;
+}
+
 .facility-card {
     margin: auto;
-    margin-top: 100px;
+    margin-bottom: 50px;
     width: 80%;
     border-radius: 10px;
     background-color: rgb(240, 113, 103, 0.8);

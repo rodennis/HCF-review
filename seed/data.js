@@ -15,9 +15,11 @@ const insertData = async () => {
 
   const facilities = [
     {
-      name:'ascension sacred heart ',
+      name:'baptist medical center ',
       image: 'https://www.guthrie.org/sites/default/files/styles/1600x900/public/2020-01/corning-hospital.jpg?itok=tZ2UX3rt',
-      address: '1 Guthrie Dr, Corning, NY 14830',
+      address: '1 Guthrie Dr, pensacola, fl 14830',
+      city: 'Pensacola',
+      state: 'FL',
       phone: '(607) 937-7200',
       reviews: [
         {
@@ -28,9 +30,11 @@ const insertData = async () => {
       ]
     },
     {
-      name: 'baptist health care',
+      name:'baptist medical center ',
       image: 'https://www.guthrie.org/sites/default/files/styles/1600x900/public/2020-01/corning-hospital.jpg?itok=tZ2UX3rt',
-      address: '1 Guthrie Dr, Corning, NY 14830',
+      address: '1 Guthrie Dr, bagdad, fl 14830',
+      city: 'bagdad',
+      state: 'fl',
       phone: '(607) 937-7200',
       reviews: [
         {
@@ -39,7 +43,98 @@ const insertData = async () => {
           comment: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.'
       }
       ]
-    }
+    },
+    {
+      name:'baptist medical center ',
+      image: 'https://www.guthrie.org/sites/default/files/styles/1600x900/public/2020-01/corning-hospital.jpg?itok=tZ2UX3rt',
+      address: '1 Guthrie Dr, bagdad, fl 14830',
+      city: 'bagdad',
+      state: 'fl',
+      phone: '(607) 937-7200',
+      reviews: [
+        {
+          position: 'E.R. Nurse',
+          years: '12',
+          comment: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.'
+      }
+      ]
+    },
+    {
+      name:'baptist medical center ',
+      image: 'https://www.guthrie.org/sites/default/files/styles/1600x900/public/2020-01/corning-hospital.jpg?itok=tZ2UX3rt',
+      address: '1 Guthrie Dr, corning, ny 14830',
+      city: 'Corning',
+      state: 'NY',
+      phone: '(607) 937-7200',
+      reviews: [
+        {
+          position: 'E.R. Nurse',
+          years: '12',
+          comment: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.'
+      }
+      ]
+    },
+    {
+      name:'baptist medical center ',
+      image: 'https://www.guthrie.org/sites/default/files/styles/1600x900/public/2020-01/corning-hospital.jpg?itok=tZ2UX3rt',
+      address: '1 Guthrie Dr, houston, tx 14830',
+      city: 'houston',
+      state: 'texas',
+      phone: '(607) 937-7200',
+      reviews: [
+        {
+          position: 'E.R. Nurse',
+          years: '12',
+          comment: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.'
+      }
+      ]
+    },
+    {
+      name:'baptist medical center ',
+      image: 'https://www.guthrie.org/sites/default/files/styles/1600x900/public/2020-01/corning-hospital.jpg?itok=tZ2UX3rt',
+      address: '1 Guthrie Dr, corning, ny 14830',
+      city: 'Corning',
+      state: 'NY',
+      phone: '(607) 937-7200',
+      reviews: [
+        {
+          position: 'E.R. Nurse',
+          years: '12',
+          comment: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.'
+      }
+      ]
+    },
+    {
+      name:'ascension sacred heart ',
+      image: 'https://www.guthrie.org/sites/default/files/styles/1600x900/public/2020-01/corning-hospital.jpg?itok=tZ2UX3rt',
+      address: '1 Guthrie Dr, pensacola, fl 14830',
+      city: 'pensacola',
+      state: 'fl',
+      phone: '(607) 937-7200',
+      reviews: [
+        {
+          position: 'E.R. Nurse',
+          years: '12',
+          comment: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.'
+      }
+      ]
+    },
+    {
+      name:'ascension sacred heart ',
+      image: 'https://www.guthrie.org/sites/default/files/styles/1600x900/public/2020-01/corning-hospital.jpg?itok=tZ2UX3rt',
+      address: '1 Guthrie Dr, corning, ny 14830',
+      city: 'Corning',
+      state: 'NY',
+      phone: '(607) 937-7200',
+      reviews: [
+        {
+          position: 'E.R. Nurse',
+          years: '12',
+          comment: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.'
+      }
+      ]
+    },
+
   ]
 
   await Facility.insertMany(facilities)

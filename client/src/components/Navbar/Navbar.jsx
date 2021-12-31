@@ -4,14 +4,14 @@ import  { Link, useNavigate } from 'react-router-dom'
 
 function Navbar(props) {
 
-    const {setName, setFoundFacilities, facilities, name, setNotFound} = props
+    const {setName, setFoundFacilities, facilities, name, setNotFound, city, setCity, state, setState} = props
     const navigate = useNavigate()
 
     const handleSubmit = (e) => {
         e.preventDefault()
         let foundFacility = facilities.filter(facility => {
-            if (facility.name.toLowerCase().includes(name)) {
-                if (name !== '') {
+            if (facility.name.toLowerCase().includes(name) && facility.city.toLowerCase().includes(city) && facility.state.toLowerCase().includes(state) ) {
+                if (name || city || state !== '') {
                 return facility
                 }
             }
@@ -19,6 +19,8 @@ function Navbar(props) {
         setFoundFacilities(foundFacility)
         setNotFound(name)
         setName('')
+        setCity('')
+        setState('')
         navigate('/facilities')
     }
 
@@ -31,8 +33,8 @@ function Navbar(props) {
             <div className="right-side">
                 <form onSubmit={handleSubmit}>
                 <input onChange={e => setName(e.target.value)} value={name} type="texttext" className="hospital" placeholder='Hospital Name'/>
-                <input type="texttext" className="city" placeholder='City'/>
-                <input type="texttext" className="state" placeholder='State'/>
+                <input onChange={e => setCity(e.target.value)} value={city} type="texttext" className="city" placeholder='City'/>
+                <input onChange={e => setState(e.target.value)} value={state} type="texttext" className="state" placeholder='State'/>
                 <button className='hospital-search'>Search</button>
                 </form>
             </div>

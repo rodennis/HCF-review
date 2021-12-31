@@ -5,7 +5,7 @@ import {Link, useParams } from 'react-router-dom'
 function FacilityCard({foundFacilities, name, notFound}) {
 
     return (
-        <div>
+        <div className='facilities-div'>
             {
                 foundFacilities[0] ? 
                 foundFacilities.map(facility => (
@@ -17,7 +17,7 @@ function FacilityCard({foundFacilities, name, notFound}) {
                         <div className='facility-info'>
                         <h1>{facility.name}</h1>
                         <h2>Address: {facility.address}</h2>
-                        <h3>Phone #:{facility.phone}</h3>
+                        <h3>Phone #: {facility.phone}</h3>
                         </div>
                     </div>
                     </Link>
