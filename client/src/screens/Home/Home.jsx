@@ -1,12 +1,17 @@
 import React from 'react'
 import './Home.css'
+import {useState} from 'react'
 import featuredOne from '../../photos/manatee.jpeg'
 import featuredTwo from '../../photos/Weis.jpeg'
 import HomeForm from '../../components/HomeForm/HomeForm'
 
 function Home(props) {
 
-    const {setHomeName, setFoundFacilities, facilities, homeName, setNotFound, homeCity, setHomeCity, homeState, setHomeState} = props
+    const {setFoundFacilities, facilities, setNotFound} = props
+
+    const [homeName, setHomeName] = useState('')
+    const [homeCity, setHomeCity] = useState('')
+    const [homeState, setHomeState] = useState('')
 
     return (
         <div>

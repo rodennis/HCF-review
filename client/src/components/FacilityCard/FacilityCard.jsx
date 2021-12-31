@@ -1,8 +1,8 @@
 import React from 'react'
 import './FacilityCard.css'
-import {Link, useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
-function FacilityCard({foundFacilities, name, notFound}) {
+function FacilityCard({foundFacilities, notFound}) {
 
     return (
         <div className='facilities-div'>

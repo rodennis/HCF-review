@@ -1,11 +1,17 @@
 import React from 'react'
 import './Navbar.css'
 import  { Link, useNavigate } from 'react-router-dom'
+import  {useState} from 'react'
 
 function Navbar(props) {
+    
+    const { setFoundFacilities, facilities, setNotFound} = props
 
-    const {setName, setFoundFacilities, facilities, name, setNotFound, city, setCity, state, setState} = props
     const navigate = useNavigate()
+
+    const [name, setName] = useState('')
+    const [city, setCity] = useState('')
+    const [state, setState] = useState('')
 
     const handleSubmit = (e) => {
         e.preventDefault()

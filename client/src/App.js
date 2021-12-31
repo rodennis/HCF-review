@@ -15,12 +15,6 @@ function App() {
   const [user, setUser] = useState(null)
   const [facilities, setFacilities] = useState([])
   const [foundFacilities, setFoundFacilities] = useState([])
-  const [name, setName] = useState('')
-  const [city, setCity] = useState('')
-  const [state, setState] = useState('')
-  const [homeName, setHomeName] = useState('')
-  const [homeCity, setHomeCity] = useState('')
-  const [homeState, setHomeState] = useState('')
   const [notFound, setNotFound] = useState('')
 
   useEffect(() => {
@@ -41,11 +35,11 @@ useEffect(() => {
 }, [])
   return (
     <div className="App">
-      {user ? <Navbar setFoundFacilities={setFoundFacilities} name={name} setName={setName} city={city} setCity={setCity} facilities={facilities} setNotFound={setNotFound} state={state} setState={setState}/>  : <HomeNavbar />  }
+      {user ? <Navbar setFoundFacilities={setFoundFacilities} facilities={facilities} setNotFound={setNotFound}/>  : <HomeNavbar />  }
       <Routes>
-        <Route path='/' element={<Home setFoundFacilities={setFoundFacilities} homeName={homeName} setHomeName={setHomeName} homeCity={homeCity} setHomeCity={setHomeCity} facilities={facilities} setNotFound={setNotFound} homeState={homeState} setHomeState={setHomeState}/>}/>
+        <Route path='/' element={<Home setFoundFacilities={setFoundFacilities} facilities={facilities} setNotFound={setNotFound}/>}/>
         <Route path='/signIn' element={<SignIn setUser={setUser}/>}/> 
-        <Route path='/facilities' element={<Facilities name={name} foundFacilities={foundFacilities} notFound={notFound}/>}/>
+        <Route path='/facilities' element={<Facilities foundFacilities={foundFacilities} notFound={notFound}/>}/>
         <Route path='/facility/:id' element={<Facility facilities={facilities}/>}/>
       </Routes>
     </div>
