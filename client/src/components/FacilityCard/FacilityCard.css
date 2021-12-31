@@ -1,0 +1,74 @@
+.not-found-div {
+    margin-top: 300px;
+}
+
+.add-facility-button {
+    height: 55px;
+    width: 150px;
+    border-radius: 50px;
+    border-style: none;
+    color: white;
+    font-size: 20px;
+    background-color: rgb(0, 129, 167);
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.5) 1.95px 1.95px 2.6px;
+}
+
+.facility-card {
+    margin: auto;
+    margin-top: 100px;
+    width: 80%;
+    border-radius: 10px;
+    background-color: rgb(240, 113, 103, 0.8);
+    text-align: left;
+    display: flex;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.5) 1.95px 1.95px 2.6px;
+
+}
+
+.facility-image {
+    flex: 1;
+    margin: auto;
+    padding-left: 50px;
+}
+
+.facility-image img {
+    width: 300px;
+    height: 180px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.5) 1.95px 1.95px 2.6px;
+
+}
+
+.facility-info {
+flex: 3;
+padding-left: 100px;
+}
+
+.facility-info h1 {
+    font-size: 55px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: inline-block;
+    box-shadow: rgba(0, 0, 0, 0.5) 1.95px 1.95px 2.6px;
+
+}
+
+.facility-info h2 {
+    font-size: 30px;
+    margin-bottom: 0px;
+    margin-top: 15px;
+    color: white;
+}
+
+.facility-info h3 {
+    font-size: 30px;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    color: white;
+
+}

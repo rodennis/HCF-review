@@ -1,21 +1,24 @@
 import React from 'react'
 import './Navbar.css'
 import  { Link, useNavigate } from 'react-router-dom'
-import { useEffect } from 'react'
 
 function Navbar(props) {
 
-    const {setName, setFoundFacilities, facilities, name} = props
+    const {setName, setFoundFacilities, facilities, name, setNotFound} = props
     const navigate = useNavigate()
 
     const handleSubmit = (e) => {
         e.preventDefault()
         let foundFacility = facilities.filter(facility => {
             if (facility.name.toLowerCase().includes(name)) {
+                if (name !== '') {
                 return facility
+                }
             }
         })
         setFoundFacilities(foundFacility)
+        setNotFound(name)
+        setName('')
         navigate('/facilities')
     }
 

@@ -1,16 +1,22 @@
 import './App.css';
-import {Routes, Route} from 'react-router-dom'
 import {useState, useEffect} from 'react'
+import {Routes, Route} from 'react-router-dom'
+import { verifyUser } from './services/users'
 import Home from './screens/Home/Home'
 import api from './services/apiConfig'
 import SignIn from './screens/SignIn/SignIn';
-import { verifyUser } from './services/users'
 import Facilities from './screens/Facilities/Facilities'
+import Navbar from './components/Navbar/Navbar'
+import HomeNavbar from './components/Navbar/HomeNavbar'
 
 function App() {
 
   const [user, setUser] = useState(null)
   const [facilities, setFacilities] = useState([])
+  const [foundFacilities, setFoundFacilities] = useState([])
+  const [name, setName] = useState('')
+  const [homeName, setHomeName] = useState('')
+  const [notFound, setNotFound] = useState('')
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -30,10 +36,11 @@ useEffect(() => {
 }, [])
   return (
     <div className="App">
+      {user ? <Navbar setFoundFacilities={setFoundFacilities} name={name} setName={setName} facilities={facilities} setNotFound={setNotFound}/>  : <HomeNavbar />  }
       <Routes>
-        <Route path='/' element={<Home facilities={facilities} user={user}/>}/>
+        <Route path='/' element={<Home setFoundFacilities={setFoundFacilities} homeName={homeName} setHomeName={setHomeName} facilities={facilities} setNotFound={setNotFound}/>}/>
         <Route path='/signIn' element={<SignIn setUser={setUser}/>}/> 
-        <Route path='/facilities' element={<Facilities facilities={facilities} user={user}/>}/>
+        <Route path='/facilities' element={<Facilities name={name} foundFacilities={foundFacilities} notFound={notFound}/>}/>
       </Routes>
     </div>
   );
