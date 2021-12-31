@@ -81,16 +81,30 @@
     font-size: 45px;
 }
 
-.call-to-action-button-div {
+.call-to-action-text-div {
 padding-top: 150px;
 padding-left: 200px;
 flex: 3;
 }
 
+.line {
+    margin: auto;
+    width: 80%;
+    border-bottom: 2px solid rgb(240, 113, 103);
+}
+
+.call-to-action-text-div h2 {
+    padding-left: 100px;
+    padding-right: 100px;
+    color: #FDFCDC;
+    margin-top: 20px;
+    }
+
 .call-to-action-title {
     color: #FDFCDC;
     font-size: 75px;
     font-family: 'IBM Plex Sans';
+    margin-bottom: 20px;
 }
 
 .featured-title {

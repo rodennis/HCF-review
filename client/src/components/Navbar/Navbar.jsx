@@ -34,7 +34,7 @@ function Navbar(props) {
         <nav>
             <div className="left-side">
                 {/* <img src="" alt="" /> */}
-               <Link to='/'> <h2 className='logo'>Logo</h2></Link>
+               <Link className='link' to='/'> <h2 className='logo'>HCF-Reviews</h2></Link>
             </div>
             <div className="right-side">
                 <form onSubmit={handleSubmit}>
