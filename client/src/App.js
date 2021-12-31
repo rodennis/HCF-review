@@ -8,6 +8,7 @@ import SignIn from './screens/SignIn/SignIn';
 import Facilities from './screens/Facilities/Facilities'
 import Navbar from './components/Navbar/Navbar'
 import HomeNavbar from './components/Navbar/HomeNavbar'
+import Facility from './screens/Facility/Facility'
 
 function App() {
 
@@ -45,7 +46,7 @@ useEffect(() => {
         <Route path='/' element={<Home setFoundFacilities={setFoundFacilities} homeName={homeName} setHomeName={setHomeName} homeCity={homeCity} setHomeCity={setHomeCity} facilities={facilities} setNotFound={setNotFound} homeState={homeState} setHomeState={setHomeState}/>}/>
         <Route path='/signIn' element={<SignIn setUser={setUser}/>}/> 
         <Route path='/facilities' element={<Facilities name={name} foundFacilities={foundFacilities} notFound={notFound}/>}/>
-        <Route path='/facility/:id' />
+        <Route path='/facility/:id' element={<Facility facilities={facilities}/>}/>
       </Routes>
     </div>
   );

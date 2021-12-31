@@ -1,5 +1,4 @@
 import React from 'react'
-import './Facilities.css'
 import FacilityCard from '../../components/FacilityCard/FacilityCard'
 
 function Facilities({name, foundFacilities, notFound}) {

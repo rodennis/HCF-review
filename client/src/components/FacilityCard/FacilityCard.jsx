@@ -6,6 +6,8 @@ function FacilityCard({foundFacilities, name, notFound}) {
 
     return (
         <div className='facilities-div'>
+            {foundFacilities[0] ? <h3 className='search-results-count'>{`${foundFacilities.length} results found for "${notFound}"`}</h3>
+            : null }
             {
                 foundFacilities[0] ? 
                 foundFacilities.map(facility => (

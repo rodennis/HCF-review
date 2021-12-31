@@ -14,6 +14,7 @@ const Review = new Schema(
     {
       name: { type: String},
       image: { type: String }, 
+      about: { type: String }, 
       address: { type: String },
       city: { type: String },
       state: { type: String },
