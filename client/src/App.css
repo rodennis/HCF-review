@@ -5,3 +5,11 @@
 input:focus {
   outline: none;
 }
+
+.loading {
+  margin-top: 100px;
+}
+
+.facility-card {
+  margin-top: 100px;
+}

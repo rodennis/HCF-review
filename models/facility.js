@@ -12,6 +12,7 @@ const Review = new Schema(
   
   const Facility = new Schema(
     {
+      name: { type: String},
       image: { type: String }, 
       address: { type: String },
       phone: { type: String },

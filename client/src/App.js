@@ -5,6 +5,7 @@ import Home from './screens/Home/Home'
 import api from './services/apiConfig'
 import SignIn from './screens/SignIn/SignIn';
 import { verifyUser } from './services/users'
+import Facilities from './screens/Facilities/Facilities'
 
 function App() {
 
@@ -32,7 +33,7 @@ useEffect(() => {
       <Routes>
         <Route path='/' element={<Home facilities={facilities} user={user}/>}/>
         <Route path='/signIn' element={<SignIn setUser={setUser}/>}/> 
-        <Route path='/facility/:id' element={<Home user={user}/>}/>
+        <Route path='/facilities' element={<Facilities facilities={facilities} user={user}/>}/>
       </Routes>
     </div>
   );

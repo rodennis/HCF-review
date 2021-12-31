@@ -15,6 +15,7 @@ const insertData = async () => {
 
   const facilities = [
     {
+      name:'ascension sacred heart ',
       image: 'https://www.guthrie.org/sites/default/files/styles/1600x900/public/2020-01/corning-hospital.jpg?itok=tZ2UX3rt',
       address: '1 Guthrie Dr, Corning, NY 14830',
       phone: '(607) 937-7200',
@@ -27,6 +28,7 @@ const insertData = async () => {
       ]
     },
     {
+      name: 'baptist health care',
       image: 'https://www.guthrie.org/sites/default/files/styles/1600x900/public/2020-01/corning-hospital.jpg?itok=tZ2UX3rt',
       address: '1 Guthrie Dr, Corning, NY 14830',
       phone: '(607) 937-7200',

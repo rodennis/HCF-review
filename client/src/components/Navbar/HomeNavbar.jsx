@@ -7,7 +7,7 @@ function HomeNavbar() {
         <nav>
         <div className="left-side">
             {/* <img src="" alt="" /> */}
-            <h2 className='logo'>Logo</h2>
+            <h2 className='logo'><Link to='/'>Logo</Link></h2>
         </div>
         <div className="right-side">
             <Link className='sign-in' to={'/signIn'}>Sign In</Link>
