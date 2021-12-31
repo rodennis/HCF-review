@@ -6,13 +6,13 @@ import HomeForm from '../../components/HomeForm/HomeForm'
 
 function Home(props) {
 
-    const {setHomeName, setFoundFacilities, facilities, homeName, setNotFound} = props
+    const {setHomeName, setFoundFacilities, facilities, homeName, setNotFound, homeCity, setHomeCity, homeState, setHomeState} = props
 
     return (
         <div>
             <div className="call-to-action">
                 <div className="call-to-action-hospital-search">
-                    <HomeForm setFoundFacilities={setFoundFacilities} homeName={homeName} setHomeName={setHomeName} facilities={facilities} setNotFound={setNotFound}/>
+                    <HomeForm setFoundFacilities={setFoundFacilities} homeName={homeName} setHomeName={setHomeName} homeCity={homeCity} setHomeCity={setHomeCity} facilities={facilities} setNotFound={setNotFound} homeState={homeState} setHomeState={setHomeState}/>
                 </div>
                 <div className="call-to-action-button-div">
                     <h1 className='call-to-action-title'>Start 

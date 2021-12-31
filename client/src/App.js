@@ -18,6 +18,8 @@ function App() {
   const [city, setCity] = useState('')
   const [state, setState] = useState('')
   const [homeName, setHomeName] = useState('')
+  const [homeCity, setHomeCity] = useState('')
+  const [homeState, setHomeState] = useState('')
   const [notFound, setNotFound] = useState('')
 
   useEffect(() => {
@@ -40,7 +42,7 @@ useEffect(() => {
     <div className="App">
       {user ? <Navbar setFoundFacilities={setFoundFacilities} name={name} setName={setName} city={city} setCity={setCity} facilities={facilities} setNotFound={setNotFound} state={state} setState={setState}/>  : <HomeNavbar />  }
       <Routes>
-        <Route path='/' element={<Home setFoundFacilities={setFoundFacilities} homeName={homeName} setHomeName={setHomeName} facilities={facilities} setNotFound={setNotFound}/>}/>
+        <Route path='/' element={<Home setFoundFacilities={setFoundFacilities} homeName={homeName} setHomeName={setHomeName} homeCity={homeCity} setHomeCity={setHomeCity} facilities={facilities} setNotFound={setNotFound} homeState={homeState} setHomeState={setHomeState}/>}/>
         <Route path='/signIn' element={<SignIn setUser={setUser}/>}/> 
         <Route path='/facilities' element={<Facilities name={name} foundFacilities={foundFacilities} notFound={notFound}/>}/>
         <Route path='/facility/:id' />
