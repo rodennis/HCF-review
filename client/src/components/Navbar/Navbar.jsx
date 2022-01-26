@@ -19,7 +19,7 @@ function Navbar(props) {
             if (facility.name.toLowerCase().includes(name) && facility.city.toLowerCase().includes(city) && facility.state.toLowerCase().includes(state) ) {
                 if (name || city || state !== '') {
                 return facility
-                }
+                } 
             }
         })
         setFoundFacilities(foundFacility)

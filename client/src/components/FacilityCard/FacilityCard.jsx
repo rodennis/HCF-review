@@ -11,8 +11,8 @@ function FacilityCard({foundFacilities, notFound}) {
             {
                 foundFacilities[0] ? 
                 foundFacilities.map(facility => (
-                    <Link className='link' to={`/facility/${facility._id}`}>
-                    <div key={facility._id} className='facility-card'>
+                    <Link key={facility._id} className='link' to={`/facility/${facility._id}`}>
+                    <div className='facility-card'>
                         <div className='facility-image'>
                         <img src={facility.image} alt="" />
                         </div>

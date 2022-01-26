@@ -3,9 +3,9 @@ import './FacilityForm.css'
 
 function FacilityForm() {
     return (
-        <div>
-            
-        </div>
+        <form>
+            input.
+        </form>
     )
 }
 

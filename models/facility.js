@@ -4,8 +4,13 @@ const Schema = mongoose.Schema
 const Review = new Schema(
   {
     position: { type: String, required: true },
+    ratio: { type: String, required: true },
+    floor: { type: String, required: true },
     years: { type: String, required: true },
+    management: { type: String, required: true },
+    salary: { type: String, required: true },
     comment: { type: String, required: true },
+    username: { type: String }
   },
   { timestamps: true }
   )

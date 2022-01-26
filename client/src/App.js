@@ -40,7 +40,7 @@ useEffect(() => {
         <Route path='/' element={<Home setFoundFacilities={setFoundFacilities} facilities={facilities} setNotFound={setNotFound}/>}/>
         <Route path='/signIn' element={<SignIn setUser={setUser}/>}/> 
         <Route path='/facilities' element={<Facilities foundFacilities={foundFacilities} notFound={notFound}/>}/>
-        <Route path='/facility/:id' element={<Facility facilities={facilities}/>}/>
+        <Route path='/facility/:id' element={<Facility facilities={facilities} user={user}/>}/>
       </Routes>
     </div>
   );

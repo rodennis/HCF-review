@@ -1,0 +1,118 @@
+.review-form {
+    margin: 50px;
+    background-color: rgb(240, 113, 103, 0.8);
+    padding-top: 10px;
+    border-radius: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    box-shadow: rgba(0, 0, 0, 0.5) 1.95px 1.95px 2.6px;
+    display: inline-block;
+
+}
+
+.review-form h1 {
+    color: white;
+}
+
+.position {
+    height: 25px;
+    width: 150px;
+    border-radius: 50px;
+    background-color: #FDFCDC;
+    padding-left: 20px;
+    border-style: none;
+    margin: auto;
+    margin-top: 20px;
+    margin-right: 20px;
+    box-shadow: rgba(0, 0, 0, 0.5) 1.95px 1.95px 2.6px;
+}
+
+.floor {
+    height: 25px;
+    width: 150px;
+    border-radius: 50px;
+    background-color: #FDFCDC;
+    padding-left: 20px;
+    border-style: none;
+    margin: auto;
+    margin-top: 20px;
+    box-shadow: rgba(0, 0, 0, 0.5) 1.95px 1.95px 2.6px;
+}
+
+.years-employeed {
+    height: 25px;
+    width: 150px;
+    border-radius: 50px;
+    background-color: #FDFCDC;
+    padding-left: 20px;
+    border-style: none;
+    margin: auto;
+    margin-top: 20px;
+    margin-right: 20px;
+    box-shadow: rgba(0, 0, 0, 0.5) 1.95px 1.95px 2.6px;
+}
+
+.ratio {
+    height: 25px;
+    width: 150px;
+    border-radius: 50px;
+    background-color: #FDFCDC;
+    padding-left: 20px;
+    border-style: none;
+    margin: auto;
+    margin-top: 20px;
+    box-shadow: rgba(0, 0, 0, 0.5) 1.95px 1.95px 2.6px;
+    margin-right: 20px;
+
+}
+
+.admin-management {
+    height: 25px;
+    width: 150px;
+    border-radius: 50px;
+    background-color: #FDFCDC;
+    padding-left: 20px;
+    border-style: none;
+    margin: auto;
+    margin-top: 20px;
+    box-shadow: rgba(0, 0, 0, 0.5) 1.95px 1.95px 2.6px;
+    margin-right: 20px;
+
+}
+
+.salary {
+    height: 25px;
+    width: 150px;
+    border-radius: 50px;
+    background-color: #FDFCDC;
+    padding-left: 20px;
+    border-style: none;
+    margin: auto;
+    margin-top: 20px;
+    box-shadow: rgba(0, 0, 0, 0.5) 1.95px 1.95px 2.6px;
+}
+
+#star-button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .on {
+    color: yellow;
+  }
+  .off {
+    color: #ccc;
+  }
+
+  .comment {
+    border-radius: 10px;
+    background-color: #FDFCDC;
+    padding-left: 20px;
+    border-style: none;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.5) 1.95px 1.95px 2.6px;
+    margin-bottom: 10px;
+  }
