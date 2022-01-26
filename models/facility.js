@@ -10,7 +10,8 @@ const Review = new Schema(
     management: { type: String, required: true },
     salary: { type: String, required: true },
     comment: { type: String, required: true },
-    username: { type: String }
+    username: { type: String },
+    approved: { type: Boolean  }
   },
   { timestamps: true }
   )

@@ -1,13 +1,27 @@
 import React from "react";
 import "./ReviewForm.css";
-import { useState } from "react";
+import emailjs from 'emailjs-com'
 
 function ReviewForm(props) {
 
-  const {handleChange, years, floor, ratio, management, position, comment, salary, handleSubmit} = props
+  const {handleChange, years, floor, ratio, management, position, comment, salary, handleSubmit, hover, setHover, rating, setRating} = props
+  const userID = process.env.REACT_APP_USER_ID
+
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_tw56ycr', 'template_f14i90e', e.target, userID)
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+    e.target.reset()
+  }
 
   return (
-    <form onSubmit={handleSubmit} className="review-form">
+    <form onSubmit={handleSubmit, sendEmail} className="review-form">
       <h1>Leave A Review</h1>
       <input
         onChange={(e) => handleChange(e)}
@@ -68,9 +82,9 @@ function ReviewForm(props) {
               type="button"
               key={index}
               className={index <= (hover || rating) ? "on" : "off"}
-              onClick={() => handleChange(index)}
-              onMouseEnter={() => handleChange(index)}
-              onMouseLeave={() => setH(rating)}
+              onClick={() => setRating(index)}
+              onMouseEnter={() => setHover(index)}
+              onMouseLeave={() => setHover(rating)}
             >
               <span className="star">&#9733;</span>
             </button>

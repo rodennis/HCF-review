@@ -111,8 +111,10 @@
     border-radius: 10px;
     background-color: #FDFCDC;
     padding-left: 20px;
+    padding-top: 10px;
     border-style: none;
     margin: auto;
     box-shadow: rgba(0, 0, 0, 0.5) 1.95px 1.95px 2.6px;
     margin-bottom: 10px;
+    outline: none;
   }

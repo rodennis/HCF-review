@@ -9,6 +9,8 @@ function Facility({ facilities, user }) {
   const params = useParams();
 
   const [facility, setFacility] = useState({});
+  const [rating, setRating] = useState(0);
+  const [hover, setHover] = useState(0);
   const [newReview, setNewReview] = useState({
     position: "",
     ratio: "",
@@ -17,9 +19,9 @@ function Facility({ facilities, user }) {
     management: "",
     salary: "",
     comment: "",
-    rating: 0,
-    hover: 0,
+    rate: rating,
     username: "",
+    approved: false,
   });
 
   useEffect(() => {
@@ -27,8 +29,8 @@ function Facility({ facilities, user }) {
       return facility._id === params.id;
     });
     setFacility(foundFacility);
-    setNewReview({...newReview, username: user?.username})
-  }, [facilities, params.id ]);
+    setNewReview({ ...newReview, username: user?.username });
+  }, [facilities, params.id]);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -37,7 +39,6 @@ function Facility({ facilities, user }) {
       [name]: value,
     });
   };
-
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -76,15 +77,23 @@ function Facility({ facilities, user }) {
         floor={newReview.floor}
         ratio={newReview.ratio}
         comment={newReview.comment}
+        rating={rating}
+        setRating={setRating}
+        hover={hover}
+        setHover={setHover}
       />
-      { 
-      facility && facility.reviews ?
-        facility.reviews.map(review => (
-          <div key={review._id}>
-            <h1>{review.position}</h1>
-          </div>
-        )) : <h1>Loading...</h1>
-      }
+      {facility && facility.reviews ? (
+        facility.reviews.map(
+          (review) =>
+            review.approved === true && (
+              <div key={review._id}>
+                <h1>{review.position}</h1>
+              </div>
+            )
+        )
+      ) : (
+        <h1>Loading...</h1>
+      )}
     </div>
   );
 }
