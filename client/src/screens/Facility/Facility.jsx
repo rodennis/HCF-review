@@ -3,21 +3,13 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./Facility.css";
 import ReviewForm from "../../components/ReviewForm/ReviewForm";
-import { updateReview } from '../../services/reviews'
+import { updateReview } from "../../services/reviews";
 
 function Facility({ facilities, user }) {
   const params = useParams();
 
   const [facility, setFacility] = useState({});
-
-  useEffect(() => {
-    const foundFacility = facilities.find((facility) => {
-      return facility._id === params.id;
-    });
-    setFacility(foundFacility);
-  }, [facilities, params.id]);
-
-  const [review, setReview] = useState({
+  const [newReview, setNewReview] = useState({
     position: "",
     ratio: "",
     floor: "",
@@ -25,22 +17,33 @@ function Facility({ facilities, user }) {
     management: "",
     salary: "",
     comment: "",
-    username: user.username
+    rating: 0,
+    hover: 0,
+    username: "",
   });
+
+  useEffect(() => {
+    const foundFacility = facilities.find((facility) => {
+      return facility._id === params.id;
+    });
+    setFacility(foundFacility);
+    setNewReview({...newReview, username: user?.username})
+  }, [facilities, params.id ]);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    setReview({
-      ...review,
+    setNewReview({
+      ...newReview,
       [name]: value,
     });
   };
 
-const handleSubmit = async (event) => {
-  event.preventDefault();
-  facility.reviews.push(review);
-  await updateReview(params.id, facility);
-};
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    facility.reviews.push(newReview);
+    await updateReview(params.id, facility);
+  };
 
   return (
     <div>
@@ -63,17 +66,25 @@ const handleSubmit = async (event) => {
           </div>
         </div>
       )}
-      <ReviewForm 
-      handleChange={handleChange}
-      handleSubmit={handleSubmit}
-      position={review.position}
-      salary={review.salary}
-      years={review.years}
-      management={review.management}
-      floor={review.floor}
-      ratio={review.ratio}
-      comment={review.comment}
+      <ReviewForm
+        handleChange={handleChange}
+        handleSubmit={handleSubmit}
+        position={newReview.position}
+        salary={newReview.salary}
+        years={newReview.years}
+        management={newReview.management}
+        floor={newReview.floor}
+        ratio={newReview.ratio}
+        comment={newReview.comment}
       />
+      { 
+      facility && facility.reviews ?
+        facility.reviews.map(review => (
+          <div key={review._id}>
+            <h1>{review.position}</h1>
+          </div>
+        )) : <h1>Loading...</h1>
+      }
     </div>
   );
 }

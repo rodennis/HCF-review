@@ -5,8 +5,6 @@ import { useState } from "react";
 function ReviewForm(props) {
 
   const {handleChange, years, floor, ratio, management, position, comment, salary, handleSubmit} = props
-  const [rating, setRating] = useState(0);
-  const [hover, setHover] = useState(0);
 
   return (
     <form onSubmit={handleSubmit} className="review-form">
@@ -70,9 +68,9 @@ function ReviewForm(props) {
               type="button"
               key={index}
               className={index <= (hover || rating) ? "on" : "off"}
-              onClick={() => setRating(index)}
-              onMouseEnter={() => setHover(index)}
-              onMouseLeave={() => setHover(rating)}
+              onClick={() => handleChange(index)}
+              onMouseEnter={() => handleChange(index)}
+              onMouseLeave={() => setH(rating)}
             >
               <span className="star">&#9733;</span>
             </button>
