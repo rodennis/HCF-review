@@ -3,13 +3,14 @@ const Schema = mongoose.Schema
 
 const Review = new Schema(
   {
-    position: { type: String, required: true },
-    ratio: { type: String, required: true },
-    floor: { type: String, required: true },
-    years: { type: String, required: true },
-    management: { type: String, required: true },
-    salary: { type: String, required: true },
-    comment: { type: String, required: true },
+    position: { type: String },
+    ratio: { type: String },
+    floor: { type: String },
+    years: { type: String },
+    management: { type: String },
+    salary: { type: String },
+    comment: { type: String },
+    rate: {type: Number, required: true},
     username: { type: String },
     approved: { type: Boolean  }
   },

@@ -6,8 +6,9 @@ function FacilityCard({foundFacilities, notFound}) {
 
     return (
         <div className='facilities-div'>
-            {foundFacilities[0] ? <h3 className='search-results-count'>{`${foundFacilities.length} results found for "${notFound}"`}</h3>
-            : null }
+            {foundFacilities.length > 1 ? <h3 className='search-results-count'>{`${foundFacilities.length} results found for "${notFound}"`}</h3>
+            : <h3 className='search-results-count'>{`${foundFacilities.length} result found for "${notFound}"`}</h3>
+    }
             {
                 foundFacilities[0] ? 
                 foundFacilities.map(facility => (

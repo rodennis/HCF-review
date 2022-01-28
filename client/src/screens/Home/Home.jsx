@@ -22,7 +22,7 @@ function Home(props) {
                 <div className="call-to-action-text-div">
                     <h1 className='call-to-action-title'>HCF-Reviews</h1>
                     <div className='line'></div>
-                    <h2>A place for healthcare professionals to come and post truthful, and honest reviews about recent or past healthcare facilities. </h2>
+                    <h2>A place for healthcare professionals to come and post truthful, and honest reviews about present or past healthcare facilities. </h2>
                 </div>
             </div>
                 <h2 className='featured-title'>Featured Reviews</h2>

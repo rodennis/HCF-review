@@ -22,7 +22,6 @@
     margin: auto;
     margin-bottom: 50px;
     width: 80%;
-    border-radius: 10px;
     background-color: rgb(240, 113, 103, 0.8);
     text-align: left;
     display: flex;
@@ -46,7 +45,6 @@
 .facility-image img {
     width: 300px;
     height: 180px;
-    border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.5) 1.95px 1.95px 2.6px;
 
 }

@@ -4,13 +4,19 @@ import { useEffect, useState } from "react";
 import "./Facility.css";
 import ReviewForm from "../../components/ReviewForm/ReviewForm";
 import { updateReview } from "../../services/reviews";
+import Reviews from '../../components/Reviews/Reviews'
+import emailjs from 'emailjs-com'
+import Rating from '../../components/Rating/Rating'
 
 function Facility({ facilities, user }) {
   const params = useParams();
+  const userID = process.env.REACT_APP_USER_ID
 
   const [facility, setFacility] = useState({});
   const [rating, setRating] = useState(0);
   const [hover, setHover] = useState(0);
+  const [toggle, setToggle] = useState(false)
+  const [dispForm, setDispForm] = useState(false)
   const [newReview, setNewReview] = useState({
     position: "",
     ratio: "",
@@ -19,7 +25,7 @@ function Facility({ facilities, user }) {
     management: "",
     salary: "",
     comment: "",
-    rate: rating,
+    rate: 0,
     username: "",
     approved: false,
   });
@@ -29,9 +35,9 @@ function Facility({ facilities, user }) {
       return facility._id === params.id;
     });
     setFacility(foundFacility);
-    setNewReview({ ...newReview, username: user?.username });
-  }, [facilities, params.id]);
-
+    setNewReview({ ...newReview, rate: rating });
+  }, [facilities, params.id, toggle, rating]);
+  
   const handleChange = (event) => {
     const { name, value } = event.target;
     setNewReview({
@@ -39,12 +45,25 @@ function Facility({ facilities, user }) {
       [name]: value,
     });
   };
-
-  const handleSubmit = async (event) => {
-    event.preventDefault();
+  
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setNewReview({ ...newReview, username: user?.username });
     facility.reviews.push(newReview);
     await updateReview(params.id, facility);
+    // emailjs.sendForm('service_tw56ycr', 'template_f14i90e', e.target, userID)
+    //   .then((result) => {
+    //       console.log(result.text);
+    //   }, (error) => {
+    //       console.log(error.text);
+    //   });
+    // e.target.reset()
+    setToggle(prevToggle => !prevToggle)
   };
+
+  const handleClick = () => {
+    setDispForm(prevDispForm => !prevDispForm)
+  }
 
   return (
     <div>
@@ -59,6 +78,7 @@ function Facility({ facilities, user }) {
               <h2>Facility Info</h2>
               <h3>Address: {facility.address}</h3>
               <h3>Phone #: {facility.phone}</h3>
+              <Rating facility={facility}/>
             </div>
           </div>
           <div className="facility-about">
@@ -67,7 +87,9 @@ function Facility({ facilities, user }) {
           </div>
         </div>
       )}
+      <h4>Add a <button className='add-review' onClick={handleClick}>Review</button></h4>
       <ReviewForm
+        dispForm={dispForm}
         handleChange={handleChange}
         handleSubmit={handleSubmit}
         position={newReview.position}
@@ -81,19 +103,11 @@ function Facility({ facilities, user }) {
         setRating={setRating}
         hover={hover}
         setHover={setHover}
+        setNewReview={setNewReview}
+        newReview={newReview}
+        rate={newReview.rate}
       />
-      {facility && facility.reviews ? (
-        facility.reviews.map(
-          (review) =>
-            review.approved === true && (
-              <div key={review._id}>
-                <h1>{review.position}</h1>
-              </div>
-            )
-        )
-      ) : (
-        <h1>Loading...</h1>
-      )}
+      <Reviews facility={facility}/>
     </div>
   );
 }

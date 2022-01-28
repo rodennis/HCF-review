@@ -1,27 +1,12 @@
 import React from "react";
 import "./ReviewForm.css";
-import emailjs from 'emailjs-com'
 
 function ReviewForm(props) {
 
-  const {handleChange, years, floor, ratio, management, position, comment, salary, handleSubmit, hover, setHover, rating, setRating} = props
-  const userID = process.env.REACT_APP_USER_ID
-
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs.sendForm('service_tw56ycr', 'template_f14i90e', e.target, userID)
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
-      });
-    e.target.reset()
-  }
+  const {handleChange, dispForm, years, floor, ratio, management, position, comment, salary, handleSubmit, hover, setHover, rating, setRating} = props
 
   return (
-    <form onSubmit={handleSubmit, sendEmail} className="review-form">
+    <form onSubmit={handleSubmit} className={dispForm === true ? "review-form" : "hide"}>
       <h1>Leave A Review</h1>
       <input
         onChange={(e) => handleChange(e)}
@@ -102,7 +87,7 @@ function ReviewForm(props) {
         placeholder="Leave a comment..."
       ></textarea>{" "}
       <br />
-      <button>Submit</button>
+      <button className="submitReview">Submit</button>
     </form>
   );
 }
