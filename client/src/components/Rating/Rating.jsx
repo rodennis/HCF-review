@@ -1,28 +1,30 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useState, useLayoutEffect } from "react";
+import React, { useState, useEffect } from "react";
 
-function Rating({facility }) {
+function Rating({ facility }) {
   const [totalRating, setTotalRating] = useState(0);
   const [facilityRating, setFacilityRating] = useState(0);
+  const length = facility.reviews?.length
   let total = 0;
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     facility?.reviews?.forEach((review) => {
       setTotalRating((total += review.rate));
     });
-    // setFacilityRating(totalRating / facility.reviews?.length);
-  }, [facility]);
+    setFacilityRating(totalRating > 0 ? parseInt(totalRating / length) : 1);
+  }, [totalRating, facility]);
 
   return (
     <div>
       <div className="star-rating">
-        {[...Array(totalRating / facility?.reviews?.length)].map((index) => {
-          return (
-            <button id="star-button" key={index} className="on" >
-              <span className="star">&#9733;</span>
-            </button>
-          );
-        })}
+        {facilityRating &&
+          [...Array(Number(facilityRating))].map((index) => {
+            return (
+              <button id="star-button" key={index} className={totalRating > 0 ? "on" : "off"}>
+                <span className="star">&#9733;</span>
+              </button>
+            );
+          })}
       </div>
     </div>
   );
