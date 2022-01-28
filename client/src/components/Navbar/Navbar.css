@@ -93,3 +93,9 @@ nav {
 .hospital-search:hover {
     background-color: #F07167;
 }
+
+.logo {
+    width: 120px;
+    margin: 0px;
+    margin-top: -20px;
+}

@@ -18,7 +18,7 @@ function FacilityCard({foundFacilities, notFound}) {
                         <img src={facility.image} alt="" />
                         </div>
                         <div className='facility-info'>
-                        <h1>{facility.name}</h1>
+                        <h1>{facility.name.length < 20 ? facility.name : `${facility.name.slice(0, 20)}...`}</h1>
                         <h2>Address: {facility.address}</h2>
                         <h3>Phone #: {facility.phone}</h3>
                         </div>

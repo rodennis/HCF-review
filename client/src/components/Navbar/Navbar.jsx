@@ -2,6 +2,7 @@ import React from 'react'
 import './Navbar.css'
 import  { Link, useNavigate } from 'react-router-dom'
 import  {useState} from 'react'
+import logo from '../../photos/HCFLogo.png'
 
 function Navbar(props) {
     
@@ -33,8 +34,7 @@ function Navbar(props) {
     return (
         <nav>
             <div className="left-side">
-                {/* <img src="" alt="" /> */}
-               <Link className='link' to='/'> <h2 className='logo'>HCF-Reviews</h2></Link>
+               <Link className='link' to='/'><img className='logo' src={logo} alt="" /></Link>
             </div>
             <div className="right-side">
                 <form onSubmit={handleSubmit}>
