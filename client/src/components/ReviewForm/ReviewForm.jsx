@@ -1,59 +1,65 @@
-import React from "react";
 import "./ReviewForm.css";
 
 function ReviewForm(props) {
-
-  const {handleChange, dispForm, years, floor, ratio, management, position, comment, salary, handleSubmit, hover, setHover, rating, setRating} = props
+  const {
+    handleChange,
+    handleSubmit,
+    hover,
+    setHover,
+    rating,
+    setRating,
+    newReview
+  } = props;
 
   return (
-    <form onSubmit={handleSubmit} className={dispForm === true ? "review-form" : "hide"}>
+    <form onSubmit={handleSubmit} id="reviewForm" className="review-form">
       <h1>Leave A Review</h1>
       <input
         onChange={(e) => handleChange(e)}
-        value={position}
+        value={newReview.position}
         type="text"
-        name='position'
+        name="position"
         className="position"
         placeholder="Position"
       />
       <input
         onChange={(e) => handleChange(e)}
-        value={ratio}
+        value={newReview.ratio}
         type="text"
-        name='ratio'
+        name="ratio"
         className="ratio"
         placeholder="Ratio"
       />
       <input
         onChange={(e) => handleChange(e)}
-        value={floor}
+        value={newReview.floor}
         type="text"
-        name='floor'
+        name="floor"
         className="floor"
         placeholder="Floor"
       />{" "}
       <br />
       <input
         onChange={(e) => handleChange(e)}
-        value={years}
+        value={newReview.years}
         type="text"
-        name='years'
+        name="years"
         className="years-employeed"
         placeholder="Years Employeed"
       />
       <input
         onChange={(e) => handleChange(e)}
-        value={management}
+        value={newReview.management}
         type="text"
-        name='management'
+        name="management"
         className="admin-management"
         placeholder="Admin/Management"
       />
       <input
         onChange={(e) => handleChange(e)}
-        value={salary}
+        value={newReview.salary}
         type="text"
-        name='salary'
+        name="salary"
         className="salary"
         placeholder="Salary"
       />{" "}
@@ -78,7 +84,7 @@ function ReviewForm(props) {
       </div>
       <textarea
         onChange={(e) => handleChange(e)}
-        value={comment}
+        value={newReview.comment}
         name="comment"
         id=""
         cols="30"

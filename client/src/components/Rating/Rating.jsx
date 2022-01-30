@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 function Rating({ facility }) {
   const [totalRating, setTotalRating] = useState(0);
   const [facilityRating, setFacilityRating] = useState(0);
-  const length = facility.reviews?.length
+  const length = facility?.reviews?.length
   let total = 0;
 
   useEffect(() => {
@@ -15,8 +15,8 @@ function Rating({ facility }) {
   }, [totalRating, facility]);
 
   return (
-    <div>
-      <div className="star-rating">
+    <div className="star-rating">
+      <div>
         {facilityRating &&
           [...Array(Number(facilityRating))].map((index) => {
             return (

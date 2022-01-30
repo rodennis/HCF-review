@@ -14,19 +14,15 @@
     box-shadow: rgba(0, 0, 0, 0.5) 1.95px 1.95px 2.6px;
 }
 
-.facilities-div {
-    margin-top: 100px;
-}
-
 .facility-card {
     margin: auto;
-    margin-bottom: 50px;
-    width: 80%;
-    background-color: rgb(240, 113, 103, 0.8);
+    width: 60%;
     text-align: left;
     display: flex;
     padding: 20px;
+    border: 1px solid lightgray;
     box-shadow: rgba(0, 0, 0, 0.5) 1.95px 1.95px 2.6px;
+    margin-bottom: 50px;
 
 }
 
@@ -39,7 +35,7 @@
 .facility-image {
     flex: 1;
     margin: auto;
-    padding-left: 50px;
+    padding-left: 25px;
 }
 
 .facility-image img {
@@ -51,32 +47,30 @@
 
 .facility-info {
 flex: 3;
-padding-left: 100px;
+padding-left: 75px;
 }
 
 .facility-info h1 {
-    font-size: 55px;
+    color: #f07167;
+    font-size: 35px;
     margin-top: 0px;
     margin-bottom: 15px;
-    color: white;
-    padding-left: 10px;
-    padding-right: 10px;
     display: inline-block;
-    box-shadow: rgba(0, 0, 0, 0.5) 1.95px 1.95px 2.6px;
+    /* box-shadow: rgba(0, 0, 0, 0.5) 1.95px 1.95px 2.6px; */
 
 }
 
 .facility-info h2 {
-    font-size: 30px;
+    font-size: 20px;
     margin-bottom: 0px;
     margin-top: 15px;
-    color: white;
+    color: #0081a7;
 }
 
 .facility-info h3 {
-    font-size: 30px;
+    font-size: 20px;
     margin-top: 15px;
     margin-bottom: 0px;
-    color: white;
+    color: #0081a7;
 
 }
