@@ -1,0 +1,18 @@
+.review {
+    display: flex;
+    margin: auto;
+    width: 60%;
+}
+
+.review-left-div {
+    flex: 1;
+}
+
+.review-middle-div {
+    flex: 1;
+    text-align: left;
+}
+
+.review-right-div {
+    flex: 3;
+}

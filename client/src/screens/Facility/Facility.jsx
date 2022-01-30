@@ -34,6 +34,7 @@ function Facility({ facilities, user }) {
     });
     setFacility(foundFacility);
     setNewReview({ ...newReview, rate: rating });
+    setNewReview({ ...newReview, username: user?.username });
   }, [facilities, params.id, toggle, rating]);
 
   const handleChange = (event) => {
@@ -46,7 +47,6 @@ function Facility({ facilities, user }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setNewReview({ ...newReview, username: user?.username });
     facility.reviews.push(newReview);
     await updateReview(params.id, facility);
     emailjs
