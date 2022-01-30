@@ -1,11 +1,12 @@
-import React from 'react';
-import {Link} from 'react-scroll'
-import Rating from '../Rating/Rating'
+import React from "react";
+import { Link } from "react-scroll";
+import Rating from "../Rating/Rating";
 
-function SingleFacility({facility}) {
-  return <div>
+function SingleFacility({ facility }) {
+  return (
+    <div>
       {facility && (
-        <div className="facility-info-div" id='top'>
+        <div className="facility-info-div" id="top">
           <div className="facility-photo-and-info">
             <div className="clicked-facility-image">
               <img src={facility.image} alt="facility" />
@@ -16,11 +17,9 @@ function SingleFacility({facility}) {
               <h3>Address: {facility.address}</h3>
               <h3 className="facility-phone">Phone #: {facility.phone}</h3>
               <div className="add-review-div">
-              <Rating facility={facility} />
-                <Link to='reviewForm' smooth={true} duration={1000}>
-                <button className="add-review">
-                  Add Review
-                </button>
+                <Rating facility={facility} />
+                <Link to="reviewForm" smooth={true} duration={1000}>
+                  <button className="add-review">Add Review</button>
                 </Link>
               </div>
             </div>
@@ -31,7 +30,8 @@ function SingleFacility({facility}) {
           </div>
         </div>
       )}
-  </div>;
+    </div>
+  );
 }
 
 export default SingleFacility;

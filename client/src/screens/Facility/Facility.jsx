@@ -1,13 +1,13 @@
 import "./Facility.css";
 import { useEffect, useState } from "react";
 import { updateReview } from "../../services/reviews";
-import { useParams} from "react-router-dom";
+import { useParams } from "react-router-dom";
 import ReviewForm from "../../components/ReviewForm/ReviewForm";
 import Reviews from "../../components/Reviews/Reviews";
 import emailjs from "emailjs-com";
-import SingleFacility from '../../components/SingleFacility/SingleFacility'
-import {Link} from 'react-scroll'
-import TopArrow from '../../photos/up-arrows.png'
+import SingleFacility from "../../components/SingleFacility/SingleFacility";
+import { Link } from "react-scroll";
+import TopArrow from "../../photos/up-arrows.png";
 function Facility({ facilities, user }) {
   const params = useParams();
   const userID = process.env.REACT_APP_USER_ID;
@@ -66,7 +66,7 @@ function Facility({ facilities, user }) {
 
   return (
     <div>
-      <SingleFacility facility={facility}/>
+      <SingleFacility facility={facility} />
       <ReviewForm
         handleChange={handleChange}
         handleSubmit={handleSubmit}
@@ -77,8 +77,8 @@ function Facility({ facilities, user }) {
         newReview={newReview}
       />
       <Reviews facility={facility} />
-      <Link to='top' smooth={true} duration={1000}>
-        <img className='top-arrow' src={TopArrow} alt="" />
+      <Link to="top" smooth={true} duration={1000}>
+        <img className="top-arrow" src={TopArrow} alt="" />
       </Link>
     </div>
   );

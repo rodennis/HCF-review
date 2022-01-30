@@ -1,20 +1,26 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import './Navbar.css'
+import React from "react";
+import { Link } from "react-router-dom";
+import "./Navbar.css";
+import logo from "../../photos/HCFLogo.png";
 
 function HomeNavbar() {
-    return (
-        <nav>
-        <div className="left-side">
-            {/* <img src="" alt="" /> */}
-            <h2 className='logo'><Link to='/'>Logo</Link></h2>
-        </div>
-        <div className="right-side">
-            <Link className='sign-in' to={'/signIn'}>Sign In</Link>
-            <Link className='sign-up' to={'/signUp'}>Sign Up</Link>
-        </div>
+  return (
+    <nav>
+      <div className="no-user-left-side">
+        <Link to="/">
+          <img className="logo" src={logo} alt="" />
+        </Link>
+      </div>
+      <div className="no-user-right-side">
+        <Link className="sign-in" to={"/signIn"}>
+          Sign In
+        </Link>
+        <Link className="sign-up" to={"/signUp"}>
+          Sign Up
+        </Link>
+      </div>
     </nav>
-    )
+  );
 }
 
-export default HomeNavbar
+export default HomeNavbar;

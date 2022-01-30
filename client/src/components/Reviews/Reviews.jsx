@@ -26,11 +26,25 @@ function Reviews({ facility }) {
                   </span>
                 </div>
                 <div className="review-middle-div">
-                  <p><span>Floor: </span>{review.floor}</p>
-                  <p><span>Admin: </span>{review.management}</p>
-                  <p><span>Salary: </span>${review.salary}</p>
-                  <p><span>Years: </span>{review.years}</p>
-                  <p><span>Ratio: </span>{review.ratio}</p>
+                  <p>
+                    <span>Floor: </span>
+                    {review.floor}
+                  </p>
+                  <p>
+                    <span>Admin: </span>
+                    {review.management}
+                  </p>
+                  <p>
+                    <span>Salary: </span>${review.salary}
+                  </p>
+                  <p>
+                    <span>Years: </span>
+                    {review.years}
+                  </p>
+                  <p>
+                    <span>Ratio: </span>
+                    {review.ratio}
+                  </p>
                 </div>
                 <div className="review-right-div">
                   <p>{review.comment}</p>

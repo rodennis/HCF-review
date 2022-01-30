@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 function Rating({ facility }) {
   const [totalRating, setTotalRating] = useState(0);
   const [facilityRating, setFacilityRating] = useState(0);
-  const length = facility?.reviews?.length
+  const length = facility?.reviews?.length;
   let total = 0;
 
   useEffect(() => {
@@ -20,7 +20,11 @@ function Rating({ facility }) {
         {facilityRating &&
           [...Array(Number(facilityRating))].map((index) => {
             return (
-              <button id="star-button" key={index} className={totalRating > 0 ? "on" : "off"}>
+              <button
+                id="star-button"
+                key={index}
+                className={totalRating > 0 ? "on" : "off"}
+              >
                 <span className="star">&#9733;</span>
               </button>
             );

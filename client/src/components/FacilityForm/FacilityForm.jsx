@@ -1,12 +1,8 @@
-import React from 'react'
-import './FacilityForm.css'
+import React from "react";
+import "./FacilityForm.css";
 
 function FacilityForm() {
-    return (
-        <form>
-            input.
-        </form>
-    )
+  return <form>input.</form>;
 }
 
-export default FacilityForm
+export default FacilityForm;

@@ -8,7 +8,7 @@ function ReviewForm(props) {
     setHover,
     rating,
     setRating,
-    newReview
+    newReview,
   } = props;
 
   return (
