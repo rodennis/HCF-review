@@ -26,6 +26,7 @@ const Review = new Schema(
       city: { type: String },
       state: { type: String },
       phone: { type: String },
+      approved: { type: Boolean},
       reviews: [ Review ]
     },
     { timestamps: true }

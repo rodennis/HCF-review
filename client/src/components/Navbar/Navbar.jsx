@@ -85,8 +85,6 @@ function Navbar(props) {
             <br />
             <p>{user.username}</p>
           </div>
-        </div>
-      </nav>
       <div
         className="drop-down"
         style={{ display: hamburger ? "inline" : "none" }}
@@ -99,6 +97,8 @@ function Navbar(props) {
           Log Out
         </Link>
       </div>
+        </div>
+      </nav>
     </div>
   );
 }

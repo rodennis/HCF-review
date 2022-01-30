@@ -13,6 +13,7 @@ function FacilityCard({ foundFacilities, notFound }) {
       )}
       {foundFacilities[0] ? (
         foundFacilities.map((facility) => (
+          facility.approved &&
           <Link
             key={facility._id}
             className="link"
@@ -38,7 +39,7 @@ function FacilityCard({ foundFacilities, notFound }) {
       ) : (
         <div className="not-found-div">
           <h1 className="loading">{`No results found for ${notFound}.`}</h1>
-          <Link className="link" to="/add-facility">
+          <Link className="link" to="/create-facility">
             <button className="add-facility-button">Add Facility</button>
           </Link>
         </div>

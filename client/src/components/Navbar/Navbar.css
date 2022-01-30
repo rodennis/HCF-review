@@ -2,7 +2,6 @@ nav {
   background-color: rgb(0, 129, 167, 0.8);
   height: 70px;
   display: flex;
-  overflow: hidden;
   position: fixed;
   top: 0;
   width: 100%;
@@ -30,7 +29,7 @@ nav {
 .middle-side {
   flex: 3;
   padding-top: 25px;
-  margin-right: -75px;
+  margin-right: 50px;
 }
 
 .sign-up {
@@ -108,6 +107,7 @@ nav {
 
 .user-profile-div {
   flex: 1;
+  max-width: 100px;
 }
 
 .user-profile {
@@ -116,9 +116,10 @@ nav {
 }
 
 .user-profile p {
-  margin-top: 30px;
   font-size: 15px;
-  margin-right: -130px;
+  margin-top: 30px;
+  margin-bottom: 0px;
+  margin-right: 20px
 }
 
 .user-image {
@@ -134,13 +135,14 @@ nav {
 
 .drop-down {
   background-color: rgb(0, 129, 167, 0.8);
-  height: 100px;
   position: absolute;
-  right: 0px;
-  margin-top: 70px;
   padding: 20px;
+  width: 100px;
   border-bottom-left-radius: 10px;
   text-align: left;
+  z-index: 100;
+  margin-top: 4px;
+  margin-left: -90px;
 }
 
 .Link {
@@ -149,3 +151,4 @@ nav {
   padding: 15px;
   color: white;
 }
+

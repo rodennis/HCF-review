@@ -1,0 +1,50 @@
+.new-facility {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.new-facility-form h1 {
+  margin-right: 120px;
+  margin-bottom: 50px;
+}
+
+.new-facility-name {
+  border: none;
+  border-bottom: 1px solid black;
+  margin-bottom: 50px;
+  width: 50%;
+}
+
+.new-facility-street {
+  border: none;
+  border-bottom: 1px solid black;
+  width: 50%;
+  margin-bottom: 50px;
+}
+
+.new-facility-city {
+  border: none;
+  border-bottom: 1px solid black;
+  width: 50%;
+  margin-bottom: 50px;
+}
+
+.new-facility-state {
+  border: none;
+  border-bottom: 1px solid black;
+  width: 50%;
+  margin-bottom: 50px;
+}
+
+.new-facility-submit {
+  height: 27px;
+  width: 80px;
+  border-radius: 50px;
+  border-style: none;
+  box-shadow: rgba(0, 0, 0, 0.5) 1.95px 1.95px 2.6px;
+  margin-right: 140px;
+  background-color: #00afb9;
+  cursor: pointer;
+}

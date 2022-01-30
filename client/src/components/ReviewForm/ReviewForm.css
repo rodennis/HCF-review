@@ -123,7 +123,12 @@
   }
 
   .submitReview {
-      margin-bottom: 10px;
-      cursor: pointer;
-      padding: 10px;
+    height: 27px;
+    width: 80px;
+    border-radius: 50px;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, 0.5) 1.95px 1.95px 2.6px;
+    background-color: #00afb9;
+    cursor: pointer;
+    margin: 20px;
   }
