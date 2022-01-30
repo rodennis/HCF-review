@@ -21,6 +21,7 @@ function ReviewForm(props) {
         name="position"
         className="position"
         placeholder="Position"
+        required
       />
       <input
         onChange={(e) => handleChange(e)}
@@ -29,6 +30,7 @@ function ReviewForm(props) {
         name="ratio"
         className="ratio"
         placeholder="Ratio"
+        required
       />
       <input
         onChange={(e) => handleChange(e)}
@@ -37,6 +39,7 @@ function ReviewForm(props) {
         name="floor"
         className="floor"
         placeholder="Floor"
+        required
       />{" "}
       <br />
       <input
@@ -46,6 +49,7 @@ function ReviewForm(props) {
         name="years"
         className="years-employeed"
         placeholder="Years Employeed"
+        required
       />
       <input
         onChange={(e) => handleChange(e)}
@@ -54,6 +58,7 @@ function ReviewForm(props) {
         name="management"
         className="admin-management"
         placeholder="Admin/Management"
+        required
       />
       <input
         onChange={(e) => handleChange(e)}
@@ -62,6 +67,7 @@ function ReviewForm(props) {
         name="salary"
         className="salary"
         placeholder="Salary"
+        required
       />{" "}
       <br />
       <div className="star-rating">
@@ -91,6 +97,7 @@ function ReviewForm(props) {
         rows="10"
         className="comment"
         placeholder="Leave a comment..."
+        required
       ></textarea>{" "}
       <br />
       <button className="submitReview">Submit</button>

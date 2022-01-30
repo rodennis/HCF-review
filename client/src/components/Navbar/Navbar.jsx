@@ -43,6 +43,7 @@ function Navbar(props) {
                 <input onChange={e => setState(e.target.value)} value={state} type="texttext" className="state" placeholder='State'/>
                 <button className='hospital-search'>Search</button>
                 </form>
+                
             </div>
         </nav>
     )

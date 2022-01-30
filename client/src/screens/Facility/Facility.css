@@ -87,3 +87,10 @@
 .star-rating {
     flex: 3;
 }
+
+.top-arrow {
+    width: 35px;
+    cursor: pointer;
+    margin-top: 25px;    
+    margin-bottom: 25px;    
+}

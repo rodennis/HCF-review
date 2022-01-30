@@ -1,7 +1,13 @@
 .review {
     display: flex;
     margin: auto;
-    width: 60%;
+    width: 70%;
+    background-color: #FDFCDC;
+    margin-bottom: 25px;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.5) 1.95px 1.95px 2.6px;
+    border-radius: 10px;
+
 }
 
 .review-left-div {
@@ -11,8 +17,18 @@
 .review-middle-div {
     flex: 1;
     text-align: left;
+    border-right: 1px solid black;
+    padding-left: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.review-middle-div span {
+    font-weight: 800;
 }
 
 .review-right-div {
     flex: 3;
+    padding-right: 40px;
+    padding-left: 40px;
 }

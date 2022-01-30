@@ -10,7 +10,10 @@ function Reviews({ facility }) {
             review.approved === true && (
               <div key={review._id} className="review">
                 <div className="review-left-div">
-                  <h2>{review.username}</h2>
+                  <h2>
+                    {review.username.charAt(0).toUpperCase() +
+                      review.username.slice(1)}
+                  </h2>
                   <p>{review.position}</p>
                   <span>
                     {[...Array(review.rate)].map((index) => {
@@ -21,13 +24,13 @@ function Reviews({ facility }) {
                       );
                     })}
                   </span>
-                          </div>
-                          <div className="review-middle-div">
-                  <p>Floor: {review.floor}</p>
-                  <p>Admin: {review.management}</p>
-                  <p>Salary: ${review.salary}</p>
-                  <p>Years: {review.years}</p>
-                  <p>Ratio: {review.ratio}</p>
+                </div>
+                <div className="review-middle-div">
+                  <p><span>Floor: </span>{review.floor}</p>
+                  <p><span>Admin: </span>{review.management}</p>
+                  <p><span>Salary: </span>${review.salary}</p>
+                  <p><span>Years: </span>{review.years}</p>
+                  <p><span>Ratio: </span>{review.ratio}</p>
                 </div>
                 <div className="review-right-div">
                   <p>{review.comment}</p>

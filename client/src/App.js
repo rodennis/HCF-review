@@ -35,7 +35,7 @@ useEffect(() => {
 }, [])
   return (
     <div className="App">
-      {user ? <Navbar setFoundFacilities={setFoundFacilities} facilities={facilities} setNotFound={setNotFound}/>  : <HomeNavbar />  }
+      {user ? <Navbar user={user} setFoundFacilities={setFoundFacilities} facilities={facilities} setNotFound={setNotFound}/>  : <HomeNavbar />  }
       <Routes>
         <Route path='/' element={<Home setFoundFacilities={setFoundFacilities} facilities={facilities} setNotFound={setNotFound}/>}/>
         <Route path='/signIn' element={<SignIn setUser={setUser}/>}/> 

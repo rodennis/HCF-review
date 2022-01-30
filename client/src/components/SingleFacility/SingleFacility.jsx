@@ -5,7 +5,7 @@ import Rating from '../Rating/Rating'
 function SingleFacility({facility}) {
   return <div>
       {facility && (
-        <div className="facility-info-div">
+        <div className="facility-info-div" id='top'>
           <div className="facility-photo-and-info">
             <div className="clicked-facility-image">
               <img src={facility.image} alt="facility" />
