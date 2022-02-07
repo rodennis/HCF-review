@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-scroll";
 import Rating from "../Rating/Rating";
 
-function SingleFacility({ facility }) {
+function SingleFacility({ facility, user }) {
   return (
     <div>
       {facility && (
@@ -19,7 +19,7 @@ function SingleFacility({ facility }) {
               <div className="add-review-div">
                 <Rating facility={facility} />
                 <Link to="reviewForm" smooth={true} duration={1000}>
-                  <button className="add-review">Add Review</button>
+                  { user && <button className="add-review">Add Review</button>}
                 </Link>
               </div>
             </div>

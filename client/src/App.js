@@ -11,6 +11,7 @@ import HomeNavbar from "./components/Navbar/HomeNavbar";
 import Facility from "./screens/Facility/Facility";
 import CreateFacility from "./screens/CreateFacility/CreateFacility";
 import UserProfile from "./screens/UserProfile/UserProfile";
+import SignUp from "./screens/SignUp/SignUp";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -59,6 +60,7 @@ function App() {
           }
         />
         <Route path="/signIn" element={<SignIn setUser={setUser} />} />
+        <Route path="/signUp" element={<SignUp setUser={setUser} />} />
         <Route
           path="/facilities"
           element={

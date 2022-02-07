@@ -67,7 +67,7 @@ function Facility({ facilities, user }) {
 
   return (
     <div>
-      <SingleFacility facility={facility} />
+      <SingleFacility facility={facility} user={user}/>
       { user &&
       <ReviewForm
         handleChange={handleChange}
