@@ -8,6 +8,7 @@ import emailjs from "emailjs-com";
 import SingleFacility from "../../components/SingleFacility/SingleFacility";
 import { Link } from "react-scroll";
 import TopArrow from "../../photos/up-arrows.png";
+
 function Facility({ facilities, user }) {
   const params = useParams();
   const userID = process.env.REACT_APP_USER_ID;
@@ -67,6 +68,7 @@ function Facility({ facilities, user }) {
   return (
     <div>
       <SingleFacility facility={facility} />
+      { user &&
       <ReviewForm
         handleChange={handleChange}
         handleSubmit={handleSubmit}
@@ -76,6 +78,7 @@ function Facility({ facilities, user }) {
         setHover={setHover}
         newReview={newReview}
       />
+}
       <Reviews facility={facility} />
       <Link to="top" smooth={true} duration={1000}>
         <img className="top-arrow" src={TopArrow} alt="" />
