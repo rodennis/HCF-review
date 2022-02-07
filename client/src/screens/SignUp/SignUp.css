@@ -1,3 +1,53 @@
+.signup-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.signup-form-div {
+    flex: 1;
+}
+
 .signup-form {
-    margin-top: 100px;
+    background-color: #0081A7;
+    width: 350px;
+    margin: auto;
+    border-radius: 10px;
+    padding-bottom: 25px;
+    margin-top: 150px;
+}
+
+.signup-form h1 {
+    font-size: 60px;
+    padding-top: 20px;
+    color: white;
+    font-family: 'IBM plex sans';
+    margin-bottom: 20px;
+}
+
+.signup-username, .signup-email, .signup-password, .signup-confpass { 
+    padding-top: 20px;
+    border-radius: 3px;
+    background-color: transparent;
+    border-style: none;
+    border-bottom: #F07167 solid;
+    margin: 5px;
+    width: 200px;
+    filter: opacity(0.7);
+    margin-bottom: 20px;
+    color: white;
+} 
+
+.signup-submit {
+    border-radius: 20px;
+    background-color: #F07167;
+    color: white;
+    width: 208px;
+    margin-left: 3px;
+    padding: 5px;
+    border-style: none;
+    font-family: 'fira sans condensed';
+    font-size: 15px;
+    margin-top: 20px;
+    cursor: pointer;
 }

@@ -14,37 +14,20 @@
     border-radius: 10px;
 }
 
+.email, .password {
+    border-radius: 3px;
+    background-color: transparent;
+    border-style: none;
+    border-bottom: #F07167 solid;
+    margin: 5px;
+    width: 200px;
+    filter: opacity(0.7);
+    margin-bottom: 20px;
+    color: white;
+}
+
 .email {
     padding-top: 20px;
-    border-radius: 3px;
-    background-color: transparent;
-    border-style: none;
-    border-bottom: #F07167 solid;
-    margin: 5px;
-    width: 200px;
-    filter: opacity(0.7);
-    margin-bottom: 20px;
-    color: white;
-}
-
-.email::placeholder {
-    color: white;
-}
-
-.password {
-    border-radius: 3px;
-    background-color: transparent;
-    border-style: none;
-    border-bottom: #F07167 solid;
-    margin: 5px;
-    width: 200px;
-    filter: opacity(0.7);
-    margin-bottom: 20px;
-    color: white;
-}
-
-.password::placeholder {
-    color: white;
 }
 
 .sign-in-button {

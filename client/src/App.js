@@ -71,8 +71,8 @@ function App() {
           path="/facility/:id"
           element={<Facility facilities={facilities} user={user} />}
         />
-        <Route path='/create-facility' element={<CreateFacility />}/>
-        <Route path='/profile' element={<UserProfile />}/>
+        <Route path="/create-facility" element={<CreateFacility />} />
+        <Route path="/profile" element={<UserProfile />} />
       </Routes>
     </div>
   );

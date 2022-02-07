@@ -1,56 +1,95 @@
-import {useState} from 'react';
-import './SignUp.css'
-import {signUp} from '../../services/users'
+import { useState } from "react";
+import "./SignUp.css";
+import { signUp } from "../../services/users";
+import { useNavigate } from "react-router-dom";
 
-function SignUp({setUser}) {
+function SignUp() {
+  const navigate = useNavigate();
 
-    const [passMessage, setPassMessage] = useState('')
-    const [signUpForm, setSignUpForm] = useState({
-        username: '',
-        email: '',
-        password: '',
-        confPassword: ''
-    })
+  const [passMessage, setPassMessage] = useState("");
+  const [signUpForm, setSignUpForm] = useState({
+    username: "",
+    email: "",
+    password: "",
+    confPassword: "",
+  });
 
-    const credentials = {
-        username: signUpForm.username,
-        email: signUpForm.email,
-        password_digest: signUpForm.password,
+  const credentials = {
+    username: signUpForm.username,
+    email: signUpForm.email,
+    password: signUpForm.password,
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (signUpForm.password === signUpForm.confPassword) {
+      await signUp(credentials);
+      navigate("/signIn");
+    } else {
+      setPassMessage("Password and Confirm Password do not match.");
     }
+  };
 
-    const handleSubmit = async (e) => {
-        e.preventDefault()
-        if(signUpForm.password === signUpForm.confPassword){
-        await signUp(credentials)
-        }else {
-            setPassMessage('Password and Confirm Password do not match.')
-        }
-    }
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setSignUpForm({
+      ...signUpForm,
+      [name]: value,
+    });
+  };
 
-    const handleChange = (event) => {
-        const { name, value } = event.target;
-        setSignUpForm({
-          ...signUpForm,
-          [name]: value,
-        });
-      };
-
-  return <div>
-      <div>
-          helper text
-      </div>
-      <form className='signup-form' onSubmit={handleSubmit}>
-          { passMessage &&
-              <h2>{passMessage}</h2>
-          }
-      <input onChange={handleChange} type="text" name='username' value={signUpForm.username} placeholder='Username' required/>
-      <br />
-      <input onChange={handleChange} type="text" name='email' value={signUpForm.email} placeholder='Email' required/><br />
-      <input onChange={handleChange} type="password" name='password' value={signUpForm.password} placeholder='Password' required/><br />
-      <input onChange={handleChange} type="password" name='confPassword' value={signUpForm.confPassword}placeholder='Confirm Password' required/><br />
-      <button>Sign Up</button>
+  return (
+    <div className="signup-div">
+      <div>helper text</div>
+      <div className="signup-form-div">
+      <form className="signup-form" onSubmit={handleSubmit}>
+        <h1>Sign Up</h1>
+        {passMessage && <h2>{passMessage}</h2>}
+        <input
+          className="signup-username"
+          onChange={handleChange}
+          type="text"
+          name="username"
+          value={signUpForm.username}
+          placeholder="Username"
+          required
+          />
+        <br />
+        <input
+          className="signup-email"
+          onChange={handleChange}
+          type="text"
+          name="email"
+          value={signUpForm.email}
+          placeholder="Email"
+          required
+          />
+        <br />
+        <input
+          className="signup-password"
+          onChange={handleChange}
+          type="password"
+          name="password"
+          value={signUpForm.password}
+          placeholder="Password"
+          required
+          />
+        <br />
+        <input
+          className="signup-confpass"
+          onChange={handleChange}
+          type="password"
+          name="confPassword"
+          value={signUpForm.confPassword}
+          placeholder="Confirm Password"
+          required
+          />
+        <br />
+        <button className="signup-submit">Sign Up</button>
       </form>
-  </div>;
+          </div>
+    </div>
+  );
 }
 
 export default SignUp;
