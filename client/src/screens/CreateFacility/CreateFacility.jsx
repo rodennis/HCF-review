@@ -36,7 +36,7 @@ function CreateFacility() {
 
   return <div className='new-facility'>
       <div className="new-facility-helper-text">
-      <h1>Didn't see the facility you were looking for? No problem just fill out this quick form and once its approved you can leave a review!</h1>
+      <h1>Didn't see the facility you were looking for? No problem just fill out this quick form and once it's approved you can leave a review!</h1>
       </div>
       <div className="new-facility-form">
           <h1>Add Facility</h1>

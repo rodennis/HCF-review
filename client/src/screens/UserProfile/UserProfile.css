@@ -1,0 +1,10 @@
+.profile-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.profile-div div {
+    flex: 1;
+}

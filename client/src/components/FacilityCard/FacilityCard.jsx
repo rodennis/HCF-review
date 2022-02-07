@@ -36,14 +36,14 @@ function FacilityCard({ foundFacilities, notFound }) {
             </div>
           </Link>
         ))
-      ) : (
+      ) :  
         <div className="not-found-div">
           <h1 className="loading">{`No results found for ${notFound}.`}</h1>
           <Link className="link" to="/create-facility">
             <button className="add-facility-button">Add Facility</button>
           </Link>
         </div>
-      )}
+      }
     </div>
   );
 }

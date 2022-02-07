@@ -10,6 +10,7 @@ import Navbar from "./components/Navbar/Navbar";
 import HomeNavbar from "./components/Navbar/HomeNavbar";
 import Facility from "./screens/Facility/Facility";
 import CreateFacility from "./screens/CreateFacility/CreateFacility";
+import UserProfile from "./screens/UserProfile/UserProfile";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -69,6 +70,7 @@ function App() {
           element={<Facility facilities={facilities} user={user} />}
         />
         <Route path='/create-facility' element={<CreateFacility />}/>
+        <Route path='/profile' element={<UserProfile />}/>
       </Routes>
     </div>
   );

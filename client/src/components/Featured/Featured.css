@@ -1,0 +1,59 @@
+.featured-title {
+    font-size: 45px;
+    padding-top: 25px;
+    font-family: 'IBM plex sans';
+    color: rgb(240, 113, 103)
+}
+
+.featured-one {
+    display: flex;
+    padding-top: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.featured-one img {
+    display: inline-block;
+    margin-left: 150px;
+    width: 500px;
+    height: 300px;
+    box-shadow: rgba(0, 0, 0, 0.5) 3.95px 3.95px 2.6px;
+}
+
+.featured-one p {
+    padding-left: 50px;
+    padding-right: 150px;
+    text-align: left;
+}
+
+.featured-one h2 {
+    margin-top: 0px;
+}
+
+.featured-hospital-name {
+font-size: 30px;
+}
+
+.featured-two {
+    display: flex;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.featured-two h2 {
+    margin-top: 0px;
+}
+
+.featured-two img {
+    display: inline-block;
+    margin-right: 150px;
+    width: 500px;
+    height: 300px;
+    box-shadow: rgba(0, 0, 0, 0.5) 3.95px 3.95px 2.6px;
+}
+
+.featured-two p {
+    padding-right: 50px;
+    padding-left: 150px;
+    text-align: left;
+}
