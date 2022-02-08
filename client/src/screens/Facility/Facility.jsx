@@ -16,6 +16,7 @@ function Facility({ facilities, user }) {
   const [facility, setFacility] = useState({});
   const [rating, setRating] = useState(0);
   const [hover, setHover] = useState(0);
+  const [success, setSuccess] = useState(false)
   const [toggle, setToggle] = useState(false);
   const [newReview, setNewReview] = useState({
     position: "",
@@ -62,13 +63,14 @@ function Facility({ facilities, user }) {
         }
       );
     e.target.reset();
-    setToggle((prevToggle) => !prevToggle);
+    setSuccess(true)
+    setToggle(true);
   };
 
   return (
     <div>
       <SingleFacility facility={facility} user={user}/>
-      { user &&
+      { user && success === false &&
       <ReviewForm
         handleChange={handleChange}
         handleSubmit={handleSubmit}
@@ -79,6 +81,14 @@ function Facility({ facilities, user }) {
         newReview={newReview}
       />
 }
+    {
+      success === true &&
+      <div className="review-success">
+        <h3>
+          Thanks for submitting a review. As soon as its been approved it will display down below!
+        </h3>
+      </div>
+    }
       <Reviews facility={facility} />
       <Link to="top" smooth={true} duration={1000}>
         <img className="top-arrow" src={TopArrow} alt="" />
