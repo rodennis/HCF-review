@@ -10,6 +10,7 @@ function SignIn({ setUser }) {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [message, setMessage] = useState('')
 
   const loginInfo = {
     email,
@@ -20,10 +21,11 @@ function SignIn({ setUser }) {
     try {
       e.preventDefault();
       const user = await signIn(loginInfo);
-      setUser(user);
-      navigate("/");
+        setUser(user);
+        navigate("/");
     } catch (error) {
       console.log(error);
+      setMessage('Incorrect username, or password.')
       setEmail("");
       setPassword("");
     }
@@ -34,6 +36,7 @@ function SignIn({ setUser }) {
       <HomeNavbar />
       <form onSubmit={handleSubmit} className="sign-in-form">
         <h1 className="sign-in-title">Sign In</h1>
+        {message && <h4>{message}</h4>}
         <input
           type="text"
           className="email"
