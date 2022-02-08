@@ -1,5 +1,5 @@
 .call-to-action {
-    background-image: url(../../photos/CallToAction.jpeg);
+    background-image: url(../../photos/blurCTA.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -103,4 +103,25 @@ flex: 3;
     font-size: 75px;
     font-family: 'IBM Plex Sans';
     margin-bottom: 20px;
+}
+
+
+@media (max-width: 600px) {
+    .call-to-action-hospital-search {
+        display: none;
+    }
+
+    .call-to-action-text-div {
+        padding-left: 0px;
+    }
+
+    .call-to-action-title {
+        font-size: 70px;
+    }
+
+    .call-to-action-text-div h2 {
+        color: ;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
 }

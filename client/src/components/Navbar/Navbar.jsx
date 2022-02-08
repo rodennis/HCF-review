@@ -54,7 +54,7 @@ function Navbar(props) {
           </Link>
         </div>
         <div className="middle-side">
-          <form onSubmit={handleSubmit}>
+          <form className='nav-search-form' onSubmit={handleSubmit}>
             <input
               onChange={(e) => setName(e.target.value)}
               value={name}

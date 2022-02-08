@@ -4,7 +4,7 @@ import './Featured.css'
 
 function Featured({facilities}) {
   return <div>
-      <h2 className="featured-title">Featured Reviews</h2>
+      <h2 className="featured-title">Featured</h2>
       <div className="featured-div">
       <Link className='link' to={`/facility/${facilities[2]?._id}`}>
         <div className="featured-one">

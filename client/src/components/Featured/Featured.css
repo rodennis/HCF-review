@@ -57,3 +57,41 @@ font-size: 30px;
     padding-left: 150px;
     text-align: left;
 }
+
+@media (max-width: 600px) {
+    .featured-title {
+        font-size: 70px;
+        padding: 0px;
+        margin: 25px;
+    }
+
+    .featured-one {
+        flex-direction: column;
+    }
+
+    .featured-one img {
+        margin: auto;
+        width: 400px;
+    }
+
+    .featured-one p {
+        padding: 0px;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .featured-two {
+        flex-direction: column-reverse;
+    }
+
+    .featured-two img {
+        margin: auto;
+        width: 400px;
+    }
+
+    .featured-two p {
+        padding: 0px;
+        text-align: center;
+        padding: 10px;
+    }
+}
