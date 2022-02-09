@@ -1,3 +1,46 @@
 .mobile-search-form {
-    margin-top: 100px;
+  margin-top: 100px;
+}
+
+.mobile-hospital {
+  width: 200px;
+  height: 25px;
+  border-radius: 50px;
+  border-style: none;
+  background-color: #fdfcdc;
+  padding-left: 20px;
+  box-shadow: rgba(0, 0, 0, 0.5) 1.95px 1.95px 2.6px;
+  margin-bottom: 25px;
+}
+
+.mobile-city {
+  height: 25px;
+  width: 140px;
+  border-radius: 50px;
+  background-color: #fdfcdc;
+  padding-left: 20px;
+  border-style: none;
+  margin-bottom: 25px;
+  box-shadow: rgba(0, 0, 0, 0.5) 1.95px 1.95px 2.6px;
+}
+
+.mobile-state {
+  height: 25px;
+  width: 140px;
+  border-radius: 50px;
+  background-color: #fdfcdc;
+  padding-left: 20px;
+  border-style: none;
+  margin-bottom: 25px;
+  box-shadow: rgba(0, 0, 0, 0.5) 1.95px 1.95px 2.6px;
+}
+
+.mobile-hospital-search {
+  height: 27px;
+  width: 80px;
+  border-radius: 50px;
+  border-style: none;
+  box-shadow: rgba(0, 0, 0, 0.5) 1.95px 1.95px 2.6px;
+  background-color: #00afb9;
+  cursor: pointer;
 }

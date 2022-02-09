@@ -31,10 +31,10 @@ function MobileSearch({setFoundFacilities, setNotFound, facilities}) {
   };
   return <div>
     <form className='mobile-search-form' onSubmit={handleSubmit}>
-      <input onChange={e => setName(e.target.value)} value={name} type="text" placeholder='Hospital'/>
-      <input onChange={e => setCity(e.target.value)} value={city} type="text" placeholder='City'/>
-      <input onChange={e => setState(e.target.value)} value={state} type="text" placeholder='State'/>
-      <button>Search</button>
+      <input className='mobile-hospital' onChange={e => setName(e.target.value)} value={name} type="text" placeholder='Hospital'/><br/>
+      <input className='mobile-city' onChange={e => setCity(e.target.value)} value={city} type="text" placeholder='City'/><br/>
+      <input className='mobile-state' onChange={e => setState(e.target.value)} value={state} type="text" placeholder='State'/><br/>
+      <button className='mobile-hospital-search'>Search</button>
     </form>
   </div>;
 }
