@@ -55,7 +55,7 @@ function Navbar(props) {
           </Link>
         </div>
         <div className="middle-side">
-          <button className="magnify-search"><img src={Maginify} alt="maginify glass" /></button>
+          <Link to='/mobile-search'><button className="magnify-search"><img src={Maginify} alt="maginify glass" /></button></Link>
           <form className='nav-search-form' onSubmit={handleSubmit}>
             <input
               onChange={(e) => setName(e.target.value)}

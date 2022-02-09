@@ -12,6 +12,7 @@ import Facility from "./screens/Facility/Facility";
 import CreateFacility from "./screens/CreateFacility/CreateFacility";
 import UserProfile from "./screens/UserProfile/UserProfile";
 import SignUp from "./screens/SignUp/SignUp";
+import MobileSearch from './screens/MobileSearch/MobileSearch'
 
 function App() {
   const [user, setUser] = useState(null);
@@ -49,30 +50,14 @@ function App() {
         <HomeNavbar />
       )}
       <Routes>
-        <Route
-          path="/"
-          element={
-            <Home
-              setFoundFacilities={setFoundFacilities}
-              facilities={facilities}
-              setNotFound={setNotFound}
-            />
-          }
-        />
+        <Route path="/" element={<Home setFoundFacilities={setFoundFacilities} facilities={facilities} setNotFound={setNotFound}/>}/>
         <Route path="/signIn" element={<SignIn setUser={setUser} />} />
         <Route path="/signUp" element={<SignUp setUser={setUser} />} />
-        <Route
-          path="/facilities"
-          element={
-            <Facilities foundFacilities={foundFacilities} notFound={notFound} />
-          }
-        />
-        <Route
-          path="/facility/:id"
-          element={<Facility facilities={facilities} user={user} />}
-        />
-        <Route path="/create-facility" element={<CreateFacility />} />
         <Route path="/profile" element={<UserProfile />} />
+        <Route path="/create-facility" element={<CreateFacility />} />
+        <Route path="/facilities" element={<Facilities foundFacilities={foundFacilities} notFound={notFound} />}/>
+        <Route path="/facility/:id" element={<Facility facilities={facilities} user={user} />}/>
+        <Route path='/mobile-search' element={<MobileSearch setNotFound={setNotFound} facilities={facilities} setFoundFacilities={setFoundFacilities}/>}/>
       </Routes>
     </div>
   );
