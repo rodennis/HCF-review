@@ -152,6 +152,10 @@ nav {
   color: white;
 }
 
+.magnify-search {
+  display: none;
+}
+
 @media (max-width: 600px) {
   .nav-search-form {
     display: none;
@@ -182,4 +186,21 @@ nav {
   .no-user-right-side {
     padding-left: 0px;
   }
+
+  .middle-side {
+    text-align: right;
+    margin-right: 15px;
+    padding-top: 15px;
+  }
+
+  .magnify-search {
+    background: transparent;
+    border: none;
+    display: inline-block;
+  }
+
+  .magnify-search img {
+    width: 40px;
+  }
+
 }

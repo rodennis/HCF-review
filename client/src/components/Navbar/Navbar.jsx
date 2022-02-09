@@ -4,6 +4,7 @@ import logo from "../../photos/HCFLogo.png";
 import "./Navbar.css";
 import UserImage from "../../photos/avatar.png";
 import { signOut } from "../../services/users";
+import Maginify from '../../photos/magnify.png'
 
 function Navbar(props) {
   const { setFoundFacilities, facilities, setNotFound, user, setUser } = props;
@@ -54,6 +55,7 @@ function Navbar(props) {
           </Link>
         </div>
         <div className="middle-side">
+          <button className="magnify-search"><img src={Maginify} alt="maginify glass" /></button>
           <form className='nav-search-form' onSubmit={handleSubmit}>
             <input
               onChange={(e) => setName(e.target.value)}
