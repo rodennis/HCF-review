@@ -6,24 +6,24 @@ function Featured({facilities}) {
   return <div>
       <h2 className="featured-title">Featured</h2>
       <div className="featured-div">
-      <Link className='link' to={`/facility/${facilities[2]?._id}`}>
+      <Link className='link' to={`/facility/${facilities[1]?._id}`}>
         <div className="featured-one">
-          <img src={facilities[2]?.image} alt="" />
+          <img src={facilities[1]?.image} alt="" />
           <p>
             <h2 className="featured-hospital-name">
               Santa Rosa Medical Center
             </h2>
-            {`${facilities[2]?.reviews[0]?.comment.slice(0, 1001)}...`}
+            {`${facilities[1]?.reviews[0]?.comment.slice(0, 1001)}...`}
           </p>
         </div>
         </Link>
-        <Link className='link' to={`/facility/${facilities[3]?._id}`}>
+        <Link className='link' to={`/facility/${facilities[0]?._id}`}>
         <div className="featured-two">
           <p>
             <h2 className="featured-hospital-name">Sacred Heart Childrens Hospital</h2>
-            {facilities[3]?.reviews[0]?.comment}
+            {facilities[0]?.reviews[0]?.comment}
           </p>
-          <img src={facilities[3]?.image} alt="" />
+          <img src={facilities[0]?.image} alt="" />
         </div>
         </Link>
       </div>
