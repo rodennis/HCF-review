@@ -9,7 +9,7 @@ const getToken = () => {
 const api = axios.create({
     baseURL: process.env.NODE_ENV === 'production'
         ? 'https://hcf-reviews-backend.herokuapp.com/api'
-        : 'http://localhost:3000/api'
+        : 'https://hcf-reviews-backend.herokuapp.com/api'
 })
 
 api.interceptors.request.use(async function (config) {
