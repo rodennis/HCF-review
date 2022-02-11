@@ -1,34 +1,58 @@
 .review {
-    display: flex;
-    margin: auto;
-    width: 70%;
-    background-color: #FDFCDC;
-    margin-bottom: 25px;
-    align-items: center;
-    box-shadow: rgba(0, 0, 0, 0.5) 1.95px 1.95px 2.6px;
-    border-radius: 10px;
-    margin-top: 50px;
+  display: flex;
+  margin: auto;
+  width: 70%;
+  background-color: #fdfcdc;
+  margin-bottom: 25px;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.5) 1.95px 1.95px 2.6px;
+  border-radius: 10px;
+  margin-top: 50px;
 }
 
 .review-left-div {
-    flex: 1;
+  flex: 1;
 }
 
 .review-middle-div {
-    flex: 1;
-    text-align: left;
-    border-right: 1px solid black;
-    padding-left: 15px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+  flex: 1;
+  text-align: left;
+  border-right: 1px solid black;
+  padding-left: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .review-middle-div span {
-    font-weight: 800;
+  font-weight: 800;
 }
 
 .review-right-div {
-    flex: 3;
-    padding-right: 40px;
-    padding-left: 40px;
+  flex: 3;
+  padding-right: 40px;
+  padding-left: 40px;
+}
+
+@media (max-width: 600px) {
+  .review {
+    flex-direction: column;
+    width: 100vw;
+  }
+
+  .review-left-div p {
+    margin-bottom: 0px;
+  }
+
+  .review-middle-div {
+    border: none;
+    width: 80%;
+    text-align: center;
+    padding: 0px;
+    margin-top: 0px;
+  }
+
+  .review-middle-div p {
+    width: 50%;
+    display: inline-block;
+  }
 }

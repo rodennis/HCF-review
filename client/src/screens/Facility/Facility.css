@@ -109,3 +109,35 @@
     color: white;
     padding: 25px;
 }
+
+@media (max-width: 600px) {
+    .facility-photo-and-info {
+        width: 100%;
+        flex-direction: column;
+        border-radius: 0px;
+        box-shadow: none;
+    }
+
+    .clicked-facility-image {
+        padding-top: 0px;
+        box-shadow: none;
+    }
+
+    .clicked-facility-image img {
+        box-shadow: none;
+        width: 100vw;
+        border-radius: 0px;
+    }
+
+    #top {
+        margin-top: 70px;
+    }
+
+    .facility-about {
+        width: 100vw;
+    }
+
+    .facility-about p {
+        padding: 25px;
+    }
+}
