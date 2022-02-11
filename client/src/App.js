@@ -31,7 +31,6 @@ function App() {
   useEffect(() => {
     const getReviews = async () => {
       const res = await api.get("/reviews");
-      console.log(res);
       setFacilities(res.data);
     };
     getReviews();

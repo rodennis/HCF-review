@@ -38,6 +38,7 @@ function Facility({ facilities, user }) {
     setFacility(foundFacility);
     setNewReview({ ...newReview, rate: rating });
     setNewReview({ ...newReview, username: user?.username });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [facilities, params.id, toggle, rating]);
 
   const handleChange = (event) => {

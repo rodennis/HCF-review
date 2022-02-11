@@ -18,6 +18,7 @@ function Navbar(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // eslint-disable-next-line array-callback-return
     let foundFacility = facilities.filter((facility) => {
       if (
         facility.name.toLowerCase().includes(name) &&
