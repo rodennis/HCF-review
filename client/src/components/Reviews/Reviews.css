@@ -33,6 +33,14 @@
   padding-left: 40px;
 }
 
+.read-more {
+  display: none;
+}
+
+.review-right-div-mobile {
+    display: none;
+}
+
 @media (max-width: 600px) {
   .review {
     flex-direction: column;
@@ -54,5 +62,23 @@
   .review-middle-div p {
     width: 50%;
     display: inline-block;
+  }
+
+  .read-more {
+    display: inline;
+    background: none;
+    border: none;
+    margin-bottom: 10px;
+  }
+
+  .review-right-div {
+      display: none;
+  }
+
+  .review-right-div-mobile {
+      display: block;
+    flex: 3;
+    padding-right: 40px;
+    padding-left: 40px;
   }
 }

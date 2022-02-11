@@ -8,3 +8,9 @@
     text-align: right;
     margin-right: 200px;
 }
+
+@media (max-width: 600px) {
+    .new-facility {
+        flex-direction: column;
+    }
+}

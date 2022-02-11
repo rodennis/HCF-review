@@ -1,7 +1,14 @@
-import React from "react";
+import {useState} from "react";
 import "./Reviews.css";
 
 function Reviews({ facility }) {
+
+  const [toggleMore, setToggleMore] = useState(false)
+
+  const handleClick = () => {
+    setToggleMore(prevToggle => !prevToggle)
+  }
+
   return (
     <div>
       {facility && facility.reviews ? (
@@ -46,8 +53,13 @@ function Reviews({ facility }) {
                     {review.ratio}
                   </p>
                 </div>
+                <div className="review-right-div-mobile">
+                  <p>{toggleMore ? review.comment : `${review.comment.slice(0, 300)}...`}</p>
+                  {review.comment.length > 500 && <button className="read-more" onClick={handleClick}>Read More</button>}
+                </div>
                 <div className="review-right-div">
                   <p>{review.comment}</p>
+                  {review.comment.length > 300 && <button className="read-more" onClick={handleClick}>Read More</button>}
                 </div>
               </div>
             )
