@@ -5,7 +5,7 @@ import Rating from "../Rating/Rating";
 function SingleFacility({ facility, user }) {
   return (
     <div>
-      {facility && (
+      {facility ? (
         <div className="facility-info-div" id="top">
           <div className="facility-photo-and-info">
             <div className="clicked-facility-image">
@@ -28,8 +28,8 @@ function SingleFacility({ facility, user }) {
             <h2>About</h2>
             <p>{facility.about}</p>
           </div>
-        </div>
-      )}
+        </div> 
+      ) : <h1>Loading...</h1>}
     </div>
   );
 }
