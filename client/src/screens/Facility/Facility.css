@@ -144,4 +144,8 @@
     .mobile-view-div {
         overflow-x: hidden;
     }
+
+    .add-review {
+        font-size: 15px;
+    }
 }
