@@ -140,4 +140,8 @@
     .facility-about p {
         padding: 25px;
     }
+
+    .mobile-view-div {
+        overflow-x: hidden;
+    }
 }

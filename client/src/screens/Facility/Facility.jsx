@@ -69,7 +69,7 @@ function Facility({ facilities, user }) {
   };
 
   return (
-    <div>
+    <div className="mobile-view-div">
       <SingleFacility facility={facility} user={user}/>
       { user && success === false &&
       <ReviewForm

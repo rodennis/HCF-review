@@ -21,9 +21,9 @@ function Navbar(props) {
     // eslint-disable-next-line array-callback-return
     let foundFacility = facilities.filter((facility) => {
       if (
-        facility.name.toLowerCase().includes(name) &&
-        facility.city.toLowerCase().includes(city) &&
-        facility.state.toLowerCase().includes(state)
+        facility.name.toLowerCase().includes(name.toLowerCase()) &&
+        facility.city.toLowerCase().includes(city.toLowerCase()) &&
+        facility.state.toLowerCase().includes(state.toLowerCase())
       ) {
         if (name || city || state !== "") {
           return facility;

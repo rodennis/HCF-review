@@ -20,9 +20,9 @@ function HomeForm(props) {
     // eslint-disable-next-line array-callback-return
     let foundFacility = facilities.filter((facility) => {
       if (
-        facility.name.toLowerCase().includes(homeName) &&
-        facility.city.toLowerCase().includes(homeCity) &&
-        facility.state.toLowerCase().includes(homeState)
+        facility.name.toLowerCase().includes(homeName.toLowerCase()) &&
+        facility.city.toLowerCase().includes(homeCity.toLowerCase()) &&
+        facility.state.toLowerCase().includes(homeState.toLowerCase())
       ) {
         if (homeName || homeCity || homeState !== "") {
           return facility;
