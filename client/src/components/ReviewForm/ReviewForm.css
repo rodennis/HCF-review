@@ -131,6 +131,7 @@
     background-color: #00afb9;
     cursor: pointer;
     margin: 20px;
+    color: white;
   }
 
   @media (max-width: 600px) {
