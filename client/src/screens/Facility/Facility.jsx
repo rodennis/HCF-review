@@ -64,8 +64,8 @@ function Facility({ facilities, user }) {
         }
       );
     e.target.reset();
-    setSuccess(true)
-    setToggle(true);
+    setSuccess(prevSuccess => !prevSuccess)
+    setToggle(prevToggle => !prevToggle);
   };
 
   return (
