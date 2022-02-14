@@ -18,17 +18,15 @@ function Rating({ facility }) {
     <div className="star-rating">
       <div>
         {facilityRating &&
-          [...Array(Number(facilityRating))].map((index) => {
-            return (
-              <button
-                id="star-button"
-                key={index}
-                className={totalRating > 0 ? "on" : "off"}
+          [...Array(Number(facilityRating))].map((star, index) => (
+            <button
+              key={index}
+              id="star-button"
+              className={totalRating > 0 ? "on" : "off"}
               >
-                <span className="star">&#9733;</span>
-              </button>
-            );
-          })}
+              <span className="star">&#9733;</span>
+            </button>
+          ))}
       </div>
     </div>
   );

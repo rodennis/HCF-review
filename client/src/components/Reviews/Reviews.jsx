@@ -23,7 +23,7 @@ function Reviews({ facility }) {
                   </h2>
                   <p>{review.position}</p>
                   <span>
-                    {[...Array(review.rate)].map((index) => {
+                    {[...Array(review.rate)].map((review, index) => {
                       return (
                         <button id="star-button" key={index} className="on">
                           <span className="star">&#9733;</span>
