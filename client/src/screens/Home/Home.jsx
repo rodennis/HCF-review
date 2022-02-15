@@ -32,7 +32,8 @@ function Home(props) {
           <h2>
             A place for healthcare professionals to come and post truthful, and
             honest reviews about present or past healthcare facilities.{" "}
-          </h2>
+          </h2><br />
+          <h2>Sign up to get started!</h2>
         </div>
       </div>
       <Featured facilities={facilities}/>
