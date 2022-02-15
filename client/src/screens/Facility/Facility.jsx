@@ -16,7 +16,7 @@ function Facility({ facilities, user }) {
   const [facility, setFacility] = useState({});
   const [rating, setRating] = useState(0);
   const [hover, setHover] = useState(0);
-  const [success, setSuccess] = useState(false)
+  const [success, setSuccess] = useState(false);
   const [toggle, setToggle] = useState(false);
   const [newReview, setNewReview] = useState({
     position: "",
@@ -38,7 +38,7 @@ function Facility({ facilities, user }) {
     setFacility(foundFacility);
     setNewReview({ ...newReview, rate: rating });
     setNewReview({ ...newReview, username: user?.username });
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [facilities, params.id, toggle, rating]);
 
   const handleChange = (event) => {
@@ -64,32 +64,32 @@ function Facility({ facilities, user }) {
         }
       );
     e.target.reset();
-    setSuccess(prevSuccess => !prevSuccess)
-    setToggle(prevToggle => !prevToggle);
+    setSuccess((prevSuccess) => !prevSuccess);
+    setToggle((prevToggle) => !prevToggle);
   };
 
   return (
     <div className="mobile-view-div">
-      <SingleFacility facility={facility} user={user}/>
-      { user && success === false &&
-      <ReviewForm
-        handleChange={handleChange}
-        handleSubmit={handleSubmit}
-        rating={rating}
-        setRating={setRating}
-        hover={hover}
-        setHover={setHover}
-        newReview={newReview}
-      />
-}
-    {
-      success === true &&
-      <div className="review-success">
-        <h3>
-          Thanks for submitting a review. As soon as its been approved it will display down below!
-        </h3>
-      </div>
-    }
+      <SingleFacility facility={facility} user={user} />
+      {user && success === false && (
+        <ReviewForm
+          handleChange={handleChange}
+          handleSubmit={handleSubmit}
+          rating={rating}
+          setRating={setRating}
+          hover={hover}
+          setHover={setHover}
+          newReview={newReview}
+        />
+      )}
+      {success === true && (
+        <div className="review-success">
+          <h3>
+            Thanks for submitting a review. As soon as its been approved it will
+            display down below!
+          </h3>
+        </div>
+      )}
       <Reviews facility={facility} />
       <Link to="top" smooth={true} duration={1000}>
         <img className="top-arrow" src={TopArrow} alt="" />
