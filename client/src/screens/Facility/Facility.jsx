@@ -26,7 +26,7 @@ function Facility({ facilities, user }) {
     management: "",
     salary: "",
     comment: "",
-    rate: 0,
+    rate: 1,
     username: "",
     approved: false,
   });

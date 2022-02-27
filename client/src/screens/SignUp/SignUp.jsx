@@ -3,7 +3,7 @@ import "./SignUp.css";
 import { signUp } from "../../services/users";
 import { useNavigate } from "react-router-dom";
 
-function SignUp() {
+function SignUp({setUser}) {
   const navigate = useNavigate();
 
   const [passMessage, setPassMessage] = useState("");
@@ -23,8 +23,9 @@ function SignUp() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (signUpForm.password === signUpForm.confPassword) {
-      await signUp(credentials);
-      navigate("/signIn");
+      const user = await signUp(credentials);
+      setUser(user)
+      navigate("/");
     } else {
       setPassMessage("Password and Confirm Password do not match.");
     }
@@ -40,7 +41,6 @@ function SignUp() {
 
   return (
     <div className="signup-div">
-      <div>helper text</div>
       <div className="signup-form-div">
       <form className="signup-form" onSubmit={handleSubmit}>
         <h1>Sign Up</h1>
